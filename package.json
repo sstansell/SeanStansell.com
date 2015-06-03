@@ -1,0 +1,19 @@
+{
+  "name": "SeanStansell.com",
+  "version": "0.0.0",
+  "description": "portfolio site",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "SeanStansell.com"
+  },
+  "author": "Sean Stansell",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.7.6",
+    "gulp-sass": "^2.0.1"
+  }
+}
