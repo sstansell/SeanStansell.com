@@ -189,7 +189,7 @@ h1 span{
   margin-left: -10px;
   width: 21px;
   height: 29px;
-  background: url(../img/arrow-down.png) no-repeat center center;
+  background: url($arrowImage) no-repeat center center;
   display: block;
   -webkit-animation: bounce-fade 1.2s infinite; /* Safari 4+ */
   -moz-animation:    bounce-fade 1.2s infinite; /* Fx 5+ */
@@ -426,7 +426,7 @@ h1 span{
   position:relative;
   margin:0 auto;
   border:2px solid #f0f0f0;
-  background: url(../img/icons/responsive.png) white no-repeat center center;
+  background: url(../images/icons/responsive.png) white no-repeat center center;
   -moz-border-radius:100px;
   -webkit-border-radius:100px;
   border-radius: 100px;
@@ -457,7 +457,7 @@ h1 span{
   position:relative;
   margin:0 auto;
   border:2px solid #f0f0f0;
-  background: url(../img/icons/minimalist.png) white no-repeat center center;
+  background: url(../images/icons/minimalist.png) white no-repeat center center;
   -moz-border-radius:100px;
   -webkit-border-radius:100px;
   border-radius: 100px;
@@ -488,7 +488,7 @@ h1 span{
   position:relative;
   margin:0 auto;
   border:2px solid #f0f0f0;
-  background: url(../img/icons/free.png) white no-repeat center center;
+  background: url(../images/icons/free.png) white no-repeat center center;
   -moz-border-radius:100px;
   -webkit-border-radius:100px;
   border-radius: 100px;
@@ -667,7 +667,7 @@ h1 span{
   width:100%;
   z-index:10;
   height:400px;
-  background:url('../img/background/partners.jpg') 0px 0px fixed;
+  background:url($secondBgImage) 0px 0px fixed;
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
