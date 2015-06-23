@@ -1,6 +1,6 @@
 
   // niceScroll
-  $("html").niceScroll();
+  //$("html").niceScroll();
     
     
   // Stick menu

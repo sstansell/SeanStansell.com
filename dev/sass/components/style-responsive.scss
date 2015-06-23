@@ -9,8 +9,12 @@
 
 
 /* iPad (portrait) */
-@media (min-width: 320px) and (max-width: 579px) {
+@media (min-width: 320px) and (max-width: 768px) {
+.start-page{
 
+  background:url($mainBgImageMed) #000 bottom center fixed no-repeat;
+
+}
 .menu{
   display:none;
 }

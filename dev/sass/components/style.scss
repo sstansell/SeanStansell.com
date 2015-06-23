@@ -22,7 +22,7 @@
   position:fixed;
   width:100%;
   height:100%;
-  background:white;
+  background:$whitish;
   z-index:99999;
 }
  
@@ -41,7 +41,7 @@ html, body{
   font-family: 'Lato', sans-serif;
   font-size:15px;
   -webkit-font-smoothing: subpixel-antialiased!important;
-  color:black;
+  color:$darkText;
   font-weight:400;
   height:100%;
 }
@@ -53,17 +53,24 @@ a{
 }
 
 h1{
-  font-size:34px;
-  color:white;
+  font-size:3rem;
+  color:$whitish;
   font-weight:400;
   text-transform:uppercase;
   letter-spacing:6px;
   line-height:1.2;
 }
-
+h2{
+  font-size:1.0rem;
+  color:$whitish;
+  font-weight:400;
+  /*text-transform:uppercase;*/
+  letter-spacing:6px;
+  line-height:1.2;
+}
 p{
   font-size:14px;
-  color:white;
+  color:$whitish;
   font-weight:300;
   letter-spacing:1px;
   margin-top:40px;
@@ -76,13 +83,13 @@ h1 span{
 
 
 ::selection {
-  background: #ada074;
-  color:white;
+  background: $activeColor;
+  color:$whitish;
 }
 
 ::-moz-selection {
-  background: #ada074;
-  color:white;
+  background: $activeColor;
+  color:$whitish;
 }
 
 
@@ -112,9 +119,9 @@ h1 span{
 }
 
 .start-page hr{
-  color: white;
+  color: $whitish;
   margin-top:30px;
-  background-color: white;
+  background-color: $whitish;
   height: 1px;
   width:106px;
   border:0;
@@ -161,9 +168,9 @@ h1 span{
   height:47px;
   margin:100px auto;
   line-height:47px;
-  border:1px solid white;
+  border:1px solid $whitish;
   text-transform:uppercase;
-  color:white;
+  color:$whitish;
   display:block;
   cursor:pointer;
   font-size:14px;
@@ -177,9 +184,9 @@ h1 span{
 }
 
 .start-page .content .text .read-more:hover{
-  color:white;
-  background: #ada074;
-  border:1px solid #ada074;
+  color:$whitish;
+  background: $activeColor;
+  border:1px solid $activeColor;
 }
 
 .start-page .content .arrow-down{
@@ -222,7 +229,7 @@ h1 span{
   position:relative;
   width:100%;
   height:90px;
-  background:#ada074;
+  background:$activeColor;
   z-index:1000;
   display:none;
 }
@@ -234,7 +241,7 @@ h1 span{
 }
 
 .menu-media .menu-content .logo {
-   color:white;
+   color:$whitish;
    font-weight:700;
    font-size:24px;
    width:200px;
@@ -273,7 +280,7 @@ h1 span{
  }
 
 .menu-click li:hover {
-  color:#ada074;
+  color:$activeColor;
  }
 
 
@@ -283,7 +290,7 @@ h1 span{
   position:relative;
   width:100%;
   height:60px;
-  background:white;
+  background:$whitish;
   border-bottom:1px solid #f2f2f2;
   z-index:1000;
 }
@@ -332,11 +339,11 @@ h1 span{
 }
 
 .menu-content li.active a{
-  color:#ada074;
+  color:$activeColor;
 }
 
 .menu-content li a:hover{
-  color:#ada074;
+  color:$activeColor;
 }
 
 
@@ -345,7 +352,7 @@ h1 span{
 .about-us{
   position:relative;
   width:100%;
-  background:white;
+  background:$whitish;
   z-index:10;
 }
 
@@ -379,7 +386,7 @@ h1 span{
 }
 
 .about-us p.title{
-  color: #a4a4a4;
+  color: $lightText;
   margin:40px auto;
   width:300px;
   line-height:26px;
@@ -406,7 +413,7 @@ h1 span{
   font-size:14px;
   width:250px;
   margin:30px auto;
-  color:#a4a4a4;
+  color:$lightText;
   line-height:26px;
   letter-spacing:0;
   position:relative;
@@ -418,7 +425,7 @@ h1 span{
   width:300px;
   float:left;
   margin-bottom:70px;
-  height:350px;
+  height:$columnHeight;
 }
 
 .about-us .column-one .circle-one{
@@ -426,7 +433,7 @@ h1 span{
   position:relative;
   margin:0 auto;
   border:2px solid #f0f0f0;
-  background: url(../images/icons/responsive.png) white no-repeat center center;
+  background: url(../images/icons/responsive.png) $whitish no-repeat center center;
   -moz-border-radius:100px;
   -webkit-border-radius:100px;
   border-radius: 100px;
@@ -440,7 +447,7 @@ h1 span{
 }
 
 .about-us .column-one .circle-one:hover{
-  border:2px solid #ada074;
+  border:2px solid $activeColor;
 
 }
 
@@ -449,7 +456,7 @@ h1 span{
   width:300px;
   float:left;
   margin-bottom:70px;
-  height:350px;
+  height:$columnHeight;
 }
 
 .about-us .column-two .circle-two{
@@ -457,7 +464,7 @@ h1 span{
   position:relative;
   margin:0 auto;
   border:2px solid #f0f0f0;
-  background: url(../images/icons/minimalist.png) white no-repeat center center;
+  background: url(../images/icons/minimalist.png) $whitish no-repeat center center;
   -moz-border-radius:100px;
   -webkit-border-radius:100px;
   border-radius: 100px;
@@ -471,7 +478,7 @@ h1 span{
 }
 
 .about-us .column-two .circle-two:hover{
-  border:2px solid #ada074;
+  border:2px solid $activeColor;
 }
 
 
@@ -480,7 +487,7 @@ h1 span{
   width:300px;
   float:left;
   margin-bottom:70px;
-  height:350px;
+  height:$columnHeight;
 }
 
 .about-us .column-three .circle-three{ 
@@ -488,7 +495,7 @@ h1 span{
   position:relative;
   margin:0 auto;
   border:2px solid #f0f0f0;
-  background: url(../images/icons/free.png) white no-repeat center center;
+  background: url(../images/icons/free.png) $whitish no-repeat center center;
   -moz-border-radius:100px;
   -webkit-border-radius:100px;
   border-radius: 100px;
@@ -502,7 +509,7 @@ h1 span{
 }
 
 .about-us .column-three .circle-three:hover{ 
-  border:2px solid #ada074;
+  border:2px solid $activeColor;
 }
 
 
@@ -547,9 +554,9 @@ h1 span{
 }
 
 .portfolio .portfolio-margin .read-more:hover{
-  background:#ada074;
-  color:white;
-  border:1px solid #ada074;
+  background:$activeColor;
+  color:$whitish;
+  border:1px solid $activeColor;
 }
 
 .portfolio .portfolio-margin h1{
@@ -603,7 +610,7 @@ h1 span{
   position: absolute;
   width: 285px;
   height:100%;
-  background: rgba(173,160,116,1);
+  background: $activeColor;
   z-index: 2;
   opacity:0;
     -webkit-transition: all 0.6s ease-in;
@@ -693,7 +700,7 @@ h1 span{
 }
 
 .partners h2{
-  color:white;
+  color:$whitish;
   letter-spacing:1px;
   font-size:32px;
   font-weight:300;
@@ -726,7 +733,7 @@ h1 span{
 .contact{
   position:relative;
   width:100%;
-  background:white;
+  background:$whitish;
   z-index:10;
   overflow:hidden;
   margin-bottom: 300px;  
@@ -875,7 +882,7 @@ input.submit{
   position:fixed;
   bottom:0;
   width:100%;
-  background:#3c3c3c;
+  background:$backColor;
 }
 
 .footer .logo{
@@ -901,7 +908,7 @@ input.submit{
 .footer .menu-footer a{
   line-height:46px;
   padding:10px;
-  color:#a4a4a4;
+  color:$lightText;
   -webkit-transition: all 0.2s ease-in;
 	-moz-transition: all 0.2s ease-in;
 	-ms-transition: all 0.2s ease-in;
@@ -910,7 +917,7 @@ input.submit{
 }
 
 .footer .menu-footer a:hover{
-  color:#ada074;
+  color:$activeColor;
 }
 
 
@@ -923,6 +930,6 @@ input.submit{
   text-align:center;
   font-size:14px;
   line-height:36px;
-  color:#a4a4a4;
+  color:$lightText;
 }
 

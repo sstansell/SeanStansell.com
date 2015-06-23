@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/** IMAGES */
+/** COLORS */
+/** COLUMNS */
 /* http://meyerweb.com/eric/tools/css/reset/  
     v2.0 | 20110126 
     License: none (public domain) 
@@ -65,7 +68,7 @@ table {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: white;
+  background: #fafafa;
   z-index: 99999; }
 
 .preloader .item {
@@ -81,7 +84,7 @@ html, body {
   font-family: 'Lato', sans-serif;
   font-size: 15px;
   -webkit-font-smoothing: subpixel-antialiased !important;
-  color: black;
+  color: #212121;
   font-weight: 400;
   height: 100%; }
 
@@ -91,16 +94,24 @@ a {
   font-size: 14px; }
 
 h1 {
-  font-size: 34px;
-  color: white;
+  font-size: 3rem;
+  color: #fafafa;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 6px;
   line-height: 1.2; }
 
+h2 {
+  font-size: 1.0rem;
+  color: #fafafa;
+  font-weight: 400;
+  /*text-transform:uppercase;*/
+  letter-spacing: 6px;
+  line-height: 1.2; }
+
 p {
   font-size: 14px;
-  color: white;
+  color: #fafafa;
   font-weight: 300;
   letter-spacing: 1px;
   margin-top: 40px; }
@@ -109,12 +120,12 @@ h1 span {
   color: #2fa68e; }
 
 ::selection {
-  background: #ada074;
-  color: white; }
+  background: #BF3F3F;
+  color: #fafafa; }
 
 ::-moz-selection {
-  background: #ada074;
-  color: white; }
+  background: #BF3F3F;
+  color: #fafafa; }
 
 .container {
   position: absolute;
@@ -127,16 +138,16 @@ h1 span {
   width: 100%;
   height: 100%;
   z-index: 10;
-  background: url("/images/backgrounds/3a8bd6d2.jpg") #c0c0c0 bottom center fixed no-repeat;
+  background: url("/images/backgrounds/spiral_low.jpg") #c0c0c0 bottom center fixed no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
 
 .start-page hr {
-  color: white;
+  color: #fafafa;
   margin-top: 30px;
-  background-color: white;
+  background-color: #fafafa;
   height: 1px;
   width: 106px;
   border: 0; }
@@ -175,9 +186,9 @@ h1 span {
   height: 47px;
   margin: 100px auto;
   line-height: 47px;
-  border: 1px solid white;
+  border: 1px solid #fafafa;
   text-transform: uppercase;
-  color: white;
+  color: #fafafa;
   display: block;
   cursor: pointer;
   font-size: 14px;
@@ -190,9 +201,9 @@ h1 span {
   transition: all 0.6s ease-in; }
 
 .start-page .content .text .read-more:hover {
-  color: white;
-  background: #ada074;
-  border: 1px solid #ada074; }
+  color: #fafafa;
+  background: #BF3F3F;
+  border: 1px solid #BF3F3F; }
 
 .start-page .content .arrow-down {
   position: absolute;
@@ -249,7 +260,7 @@ h1 span {
   position: relative;
   width: 100%;
   height: 90px;
-  background: #ada074;
+  background: #BF3F3F;
   z-index: 1000;
   display: none; }
 
@@ -259,7 +270,7 @@ h1 span {
   margin: 0 auto; }
 
 .menu-media .menu-content .logo {
-  color: white;
+  color: #fafafa;
   font-weight: 700;
   font-size: 24px;
   width: 200px;
@@ -293,14 +304,14 @@ h1 span {
   transition: all 0.2s ease-in; }
 
 .menu-click li:hover {
-  color: #ada074; }
+  color: #BF3F3F; }
 
 /* Menu */
 .menu {
   position: relative;
   width: 100%;
   height: 60px;
-  background: white;
+  background: #fafafa;
   border-bottom: 1px solid #f2f2f2;
   z-index: 1000; }
 
@@ -342,16 +353,16 @@ h1 span {
   transition: all 0.2s ease-in; }
 
 .menu-content li.active a {
-  color: #ada074; }
+  color: #BF3F3F; }
 
 .menu-content li a:hover {
-  color: #ada074; }
+  color: #BF3F3F; }
 
 /* About us */
 .about-us {
   position: relative;
   width: 100%;
-  background: white;
+  background: #fafafa;
   z-index: 10; }
 
 .about-us .content {
@@ -415,14 +426,14 @@ h1 span {
   width: 300px;
   float: left;
   margin-bottom: 70px;
-  height: 350px; }
+  height: 400px; }
 
 .about-us .column-one .circle-one {
   height: 100px;
   position: relative;
   margin: 0 auto;
   border: 2px solid #f0f0f0;
-  background: url(../images/icons/responsive.png) white no-repeat center center;
+  background: url(../images/icons/responsive.png) #fafafa no-repeat center center;
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
   border-radius: 100px;
@@ -435,21 +446,21 @@ h1 span {
   transition: all 0.2s ease-in; }
 
 .about-us .column-one .circle-one:hover {
-  border: 2px solid #ada074; }
+  border: 2px solid #BF3F3F; }
 
 .about-us .column-two {
   margin-top: 40px;
   width: 300px;
   float: left;
   margin-bottom: 70px;
-  height: 350px; }
+  height: 400px; }
 
 .about-us .column-two .circle-two {
   height: 100px;
   position: relative;
   margin: 0 auto;
   border: 2px solid #f0f0f0;
-  background: url(../images/icons/minimalist.png) white no-repeat center center;
+  background: url(../images/icons/minimalist.png) #fafafa no-repeat center center;
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
   border-radius: 100px;
@@ -462,21 +473,21 @@ h1 span {
   transition: all 0.2s ease-in; }
 
 .about-us .column-two .circle-two:hover {
-  border: 2px solid #ada074; }
+  border: 2px solid #BF3F3F; }
 
 .about-us .column-three {
   margin-top: 40px;
   width: 300px;
   float: left;
   margin-bottom: 70px;
-  height: 350px; }
+  height: 400px; }
 
 .about-us .column-three .circle-three {
   height: 100px;
   position: relative;
   margin: 0 auto;
   border: 2px solid #f0f0f0;
-  background: url(../images/icons/free.png) white no-repeat center center;
+  background: url(../images/icons/free.png) #fafafa no-repeat center center;
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
   border-radius: 100px;
@@ -489,7 +500,7 @@ h1 span {
   transition: all 0.2s ease-in; }
 
 .about-us .column-three .circle-three:hover {
-  border: 2px solid #ada074; }
+  border: 2px solid #BF3F3F; }
 
 /* Portfolio */
 .portfolio {
@@ -525,9 +536,9 @@ h1 span {
   letter-spacing: 1px; }
 
 .portfolio .portfolio-margin .read-more:hover {
-  background: #ada074;
-  color: white;
-  border: 1px solid #ada074; }
+  background: #BF3F3F;
+  color: #fafafa;
+  border: 1px solid #BF3F3F; }
 
 .portfolio .portfolio-margin h1 {
   font-size: 34px;
@@ -571,7 +582,7 @@ h1 span {
   position: absolute;
   width: 285px;
   height: 100%;
-  background: #ada074;
+  background: #BF3F3F;
   z-index: 2;
   opacity: 0;
   -webkit-transition: all 0.6s ease-in;
@@ -627,7 +638,7 @@ h1 span {
   width: 100%;
   z-index: 10;
   height: 400px;
-  background: url("/images/backgrounds/toolBench.jpg") 0px 0px fixed;
+  background: url("/images/backgrounds/photo-1425036458755-dc303a604201.jpg") 0px 0px fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -650,7 +661,7 @@ h1 span {
   right: 0; }
 
 .partners h2 {
-  color: white;
+  color: #fafafa;
   letter-spacing: 1px;
   font-size: 32px;
   font-weight: 300;
@@ -678,7 +689,7 @@ h1 span {
 .contact {
   position: relative;
   width: 100%;
-  background: white;
+  background: #fafafa;
   z-index: 10;
   overflow: hidden;
   margin-bottom: 300px; }
@@ -809,7 +820,7 @@ input.submit {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #3c3c3c; }
+  background: #263238; }
 
 .footer .logo {
   position: relative;
@@ -837,7 +848,7 @@ input.submit {
   transition: all 0.2s ease-in; }
 
 .footer .menu-footer a:hover {
-  color: #ada074; }
+  color: #BF3F3F; }
 
 .footer .copyright {
   width: 80%;
@@ -859,7 +870,9 @@ input.submit {
 --
 */
 /* iPad (portrait) */
-@media (min-width: 320px) and (max-width: 579px) {
+@media (min-width: 320px) and (max-width: 768px) {
+  .start-page {
+    background: url("/images/backgrounds/spiral_med.jpg") #000 bottom center fixed no-repeat; }
   .menu {
     display: none; }
   .menu-media {
