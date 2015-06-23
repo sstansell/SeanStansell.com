@@ -12,7 +12,7 @@ gulp.task('serve', ['sass'], function() {
       baseDir: 'dev'
     }
   });
-  gulp.watch("dev/sass/style.scss", ['sass']);
+  gulp.watch("dev/sass/**/*.scss", ['sass']);
   //gulp.watch(['*.html', 'css/**/*.css', 'js/**/*.js'], browserSync.reload);
   gulp.watch(['*.html', 'styles/**/*.css', 'scripts/**/*.js'], {cwd: 'dev'}, reload);
 });
