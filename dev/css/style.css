@@ -2,6 +2,7 @@
 /** IMAGES */
 /** COLORS */
 /** COLUMNS */
+/** PADDING */
 /* http://meyerweb.com/eric/tools/css/reset/  
     v2.0 | 20110126 
     License: none (public domain) 
@@ -64,6 +65,10 @@ table {
  * Author: Thomsoon
  * Created: 14/11/2014
  */
+sup {
+  vertical-align: super;
+  font-size: smaller; }
+
 .preloader {
   position: fixed;
   width: 100%;
@@ -138,7 +143,7 @@ h1 span {
   width: 100%;
   height: 100%;
   z-index: 10;
-  background: url("/images/backgrounds/spiral_low.jpg") #c0c0c0 bottom center fixed no-repeat;
+  background: url("/images/backgrounds/orangeSparksClose.jpg") rgba(79, 79, 79, 0.6) bottom center fixed no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -156,7 +161,7 @@ h1 span {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(51, 51, 51, 0.5);
+  background: rgba(51, 51, 51, 0.9);
   /* Standard Off */ }
 
 .start-page .content {
@@ -373,18 +378,18 @@ h1 span {
 
 .about-us h1 {
   font-size: 34px;
-  color: black;
+  color: #212121;
   text-align: center;
-  margin-top: 120px;
+  margin-top: 60px;
   letter-spacing: 6px;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.2; }
 
 .about-us hr {
-  color: black;
+  color: #212121;
   margin-top: 30px;
-  background-color: black;
+  background-color: #212121;
   height: 1px;
   width: 106px;
   border: 0; }
@@ -401,9 +406,9 @@ h1 span {
 
 .about-us h2 {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 25px;
   font-size: 26px;
-  color: black;
+  color: #212121;
   line-height: 1.2;
   letter-spacing: 6px;
   width: 100%;
@@ -422,7 +427,7 @@ h1 span {
   font-weight: 300; }
 
 .about-us .column-one {
-  margin-top: 40px;
+  /*margin-top:40px;*/
   width: 300px;
   float: left;
   margin-bottom: 70px;
@@ -449,7 +454,7 @@ h1 span {
   border: 2px solid #BF3F3F; }
 
 .about-us .column-two {
-  margin-top: 40px;
+  /*margin-top:40px;*/
   width: 300px;
   float: left;
   margin-bottom: 70px;
@@ -476,7 +481,7 @@ h1 span {
   border: 2px solid #BF3F3F; }
 
 .about-us .column-three {
-  margin-top: 40px;
+  /*margin-top:40px;*/
   width: 300px;
   float: left;
   margin-bottom: 70px;
@@ -542,18 +547,18 @@ h1 span {
 
 .portfolio .portfolio-margin h1 {
   font-size: 34px;
-  color: black;
+  color: #212121;
   text-align: center;
-  margin-top: 120px;
+  margin-top: 60px;
   letter-spacing: 6px;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.2; }
 
 .portfolio .portfolio-margin hr {
-  color: black;
+  color: #212121;
   margin-top: 30px;
-  background-color: black;
+  background-color: #212121;
   height: 1px;
   width: 106px;
   border: 0; }
@@ -632,49 +637,52 @@ h1 span {
 .clear {
   clear: both; }
 
-/* Partners */
-.partners {
+/* Bio */
+.bio {
   position: relative;
   width: 100%;
   z-index: 10;
   height: 400px;
-  background: url("/images/backgrounds/photo-1425036458755-dc303a604201.jpg") 0px 0px fixed;
+  background: url("/images/backgrounds/nutsBolts.jpg") 0px 0px fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
 
-.partners .opacity {
+.bio .opacity {
   position: absolute;
   width: 100%;
   height: 400px;
   background: rgba(79, 79, 79, 0.6); }
 
-.partners .content {
+.bio .content {
   position: absolute;
   width: 900px;
   height: 190px;
   margin: auto;
+  margin-top: 60px;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0; }
 
-.partners h2 {
+.bio h2 {
+  font-size: 3rem;
   color: #fafafa;
-  letter-spacing: 1px;
-  font-size: 32px;
-  font-weight: 300;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  line-height: 1.2;
   text-align: center; }
 
-.partners .logo {
+.bio .logo {
   position: relative;
   width: 900px;
   overflow: hidden;
   margin-top: 50px;
   text-align: center; }
 
-.partners .logo img {
+.bio .logo img {
   opacity: 0.5;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
@@ -682,7 +690,7 @@ h1 span {
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in; }
 
-.partners .logo img:hover {
+.bio .logo img:hover {
   opacity: 1; }
 
 /* Contact */
@@ -702,18 +710,18 @@ h1 span {
 
 .contact h1 {
   font-size: 34px;
-  color: black;
+  color: #212121;
   text-align: center;
-  margin-top: 120px;
+  margin-top: 60px;
   letter-spacing: 6px;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.2; }
 
 .contact hr {
-  color: black;
+  color: #212121;
   margin-top: 30px;
-  background-color: black;
+  background-color: #212121;
   height: 1px;
   width: 106px;
   border: 0; }
@@ -755,7 +763,7 @@ h1 span {
   font-weight: 300;
   float: left;
   padding-left: 40px;
-  color: black;
+  color: #212121;
   font-size: 14px;
   line-height: 26px; }
 
@@ -872,7 +880,7 @@ input.submit {
 /* iPad (portrait) */
 @media (min-width: 320px) and (max-width: 768px) {
   .start-page {
-    background: url("/images/backgrounds/spiral_med.jpg") #000 bottom center fixed no-repeat; }
+    background: url("/images/backgrounds/roadTrip.jpg") #000 bottom center fixed no-repeat; }
   .menu {
     display: none; }
   .menu-media {
