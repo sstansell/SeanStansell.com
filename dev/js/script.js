@@ -5,10 +5,6 @@
     
   // Stick menu
   $(".menu").sticky({topSpacing:0});
-
-
-
-
   // Menu Scroll to content and Active menu
   var lastId,
     topMenu = $("#menu"),
@@ -89,7 +85,7 @@ else
 
 $(window).load(function(){
 
-$(".preloader").delay(1000).fadeOut("slow")
+$(".preloader").delay(1000).fadeOut("slow");
 
   // Parallax
   if ($('.parallax-background').length) {
