@@ -8,6 +8,7 @@ var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
+var gzip = require('gulp-gzip');
  
 
 var browserSync = require('browser-sync');
@@ -41,8 +42,9 @@ gulp.task('scripts', ['clean'], function() {
   .pipe(jshint())
   .pipe(jshint.reporter('default'))
   .pipe(uglify())
-  .pipe(concat('app.min.js'))
-  .pipe(gulp.dest(bases.dist + 'scripts/'));
+  .pipe(concat('script.js'))
+  .pipe(gzip({ append: true }))
+  .pipe(gulp.dest(bases.dist + 'js/'));
 });
 
 // Imagemin images and ouput them in dist
@@ -61,10 +63,14 @@ gulp.task('copy', ['clean'], function() {
    // Copy styles
    gulp.src(paths.styles, {cwd: bases.app})
    .pipe(gulp.dest(bases.dist + 'css'));
+
+   // Copy fonts
+   gulp.src(paths.fonts, {cwd: bases.app})
+   .pipe(gulp.dest(bases.dist + 'font'));
    
-   // Copy lib scripts, maintaining the original directory structure
-   /*gulp.src(paths.libs, {cwd: 'app/**'})
-   .pipe(gulp.dest(bases.dist));*/
+   // Copy vendor scripts, maintaining the original directory structure
+   gulp.src(paths.libs, {cwd: bases.app})
+   .pipe(gulp.dest(bases.dist + 'js/vendor'));
    
    // Copy extra files
    gulp.src(paths.extras, {cwd: bases.app})
@@ -72,10 +78,10 @@ gulp.task('copy', ['clean'], function() {
 });
 
 // Define the build task as a sequence of the above tasks
-gulp.task('build', ['clean', 'scripts', 'imagemin', 'copy']);
+gulp.task('build', ['clean', 'scripts', 'imagemin', 'sass', 'copy', 'minify-html']);
 
 // start a dev server on the RELEASE code
-gulp.task('serve-release', function() {
+gulp.task('serve-release', ['build'], function() {
     browserSync.init({
         server: {
             baseDir: "release"
