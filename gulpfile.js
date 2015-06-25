@@ -19,7 +19,8 @@ var bases = {
 };
 
 var paths = {
- scripts: ['js/**/*.js'],
+ scripts: ['js/**/*.js', '!js/vendor/**/*.js'],
+ libs: ['js/vendor/*.js'],
  styles: ['css/**/*.css'],
  html: ['index.html', '404.html'],
  images: ['images/**/*.*'],
@@ -78,7 +79,10 @@ gulp.task('serve-release', function() {
     browserSync.init({
         server: {
             baseDir: "release"
-        }
+        },
+        ui: false,
+        ghostMode: false,
+        notify: false
     });
 });
 
