@@ -1,11 +1,11 @@
-@import "components/config.scss";
-@import "components/reset.scss";
+@import "components/_config.scss";
+@import "components/_reset.scss";
 @import "components/_typography.scss";
 @import "components/_base.scss";
 @import "components/_menu.scss";
-@import "components/style.scss";
+@import "components/_sections.scss";
 
-@import "components/style-responsive.scss";
+@import "components/_mediaQueries.scss";
 @import "fontello/fontello"; 
 
 
