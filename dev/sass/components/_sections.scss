@@ -1,0 +1,696 @@
+/* Thomsoon.com - OnePage CSS Responsive theme
+-- version 1.0
+-- Copyright (c) 2014 Thomsoon.com
+-- licensed under the MIT
+--
+-- http://www.thomsoon.com/
+--
+*/
+
+
+
+/*
+ * Theme Name: Onepage
+ * Author: Thomsoon
+ * Created: 14/11/2014
+ */
+
+/* Start page */
+
+.start-page{
+  position:relative;
+  width:100%;
+  height:100%;
+  z-index:10;
+  background:url($mainBgImage) rgba(79,79,79,0.6) bottom center fixed no-repeat;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.start-page h2{
+  font-size:22px;
+  text-transform: uppercase;
+  opacity:1;
+  color:$whitish;
+  font-weight:300;
+  letter-spacing:1px;
+  margin-top:40px;
+}
+
+.start-page hr{
+  color: $whitish;
+  margin-top:30px;
+  background-color: $whitish;
+  height: 1px;
+  width:106px;
+  border:0;
+
+}
+
+.start-page .opacity{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7); /* Standard Off */
+}
+
+
+.start-page .content{
+  position:relative;
+  width:700px;
+  margin:0 auto;
+  height:100%;
+}
+
+.start-page .content .text{
+  position:absolute;
+  text-align:center;
+  margin:auto;
+  top:0; 
+  left:0; 
+  bottom:0; 
+  right:0;
+  width:700px;
+  height:520px;
+}
+
+.start-page .content .text .logo{
+  width:123px;
+  height:123px;
+  margin:0 auto 50px;
+  
+}
+
+
+.start-page .content .text .read-more{
+  width:183px;
+  height:47px;
+  margin:100px auto;
+  line-height:47px;
+  border:1px solid $whitish;
+  text-transform:uppercase;
+  color:$whitish;
+  display:block;
+  cursor:pointer;
+  font-size:14px;
+  letter-spacing:1px;
+  background:none;
+  -webkit-transition: all 0.6s ease-in;
+	-moz-transition: all 0.6s ease-in;
+	-ms-transition: all 0.6s ease-in;
+	-o-transition: all 0.6s ease-in;
+	transition: all 0.6s ease-in;
+}
+
+.start-page .content .text .read-more:hover{
+  color:$whitish;
+  background: $activeColor;
+  border:1px solid $activeColor;
+}
+
+.start-page .content .arrow-down{
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  margin-left: -10px;
+  width: 21px;
+  height: 29px;
+  background: url($arrowImage) no-repeat center center;
+  display: block;
+  -webkit-animation: bounce-fade 1.2s infinite; /* Safari 4+ */
+  -moz-animation:    bounce-fade 1.2s infinite; /* Fx 5+ */
+  -o-animation:      bounce-fade 1.2s infinite; /* Opera 12+ */
+   animation:        bounce-fade 1.2s infinite; /* IE 10+ */
+}
+
+
+@-webkit-keyframes bounce-fade {
+    0%   { opacity: 0; bottom: 70px; }
+    100% { opacity: 1; bottom: 35px; }
+}
+@-moz-keyframes bounce-fade {
+    0%   { opacity: 0; bottom: 70px; }
+    100% { opacity: 1; bottom: 35px; }
+}
+@-o-keyframes bounce-fade {
+    0%   { opacity: 0; bottom:70px; }
+    100% { opacity: 1; bottom: 35px; }
+}
+@keyframes bounce-fade {
+    0%   { opacity: 0; bottom: 70px; }
+    100% { opacity: 1; bottom: 35px; }
+}
+
+
+
+
+/* What I Do secion */
+
+.what{
+  position:relative;
+  width:100%;
+  background:$whitish;
+  z-index:10;
+}
+
+.what .content{
+  position:relative;
+  width:900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.what h1{
+  font-size:34px;
+  color:$darkText;
+  text-align:center;
+  margin-top:$headerMargin;
+  letter-spacing:6px;
+  font-weight:bold;
+  text-transform:uppercase;
+  line-height:1.2;
+
+}
+
+.what hr{
+  color: $darkText;
+  margin-top:30px;
+  background-color: $darkText;
+  height: 1px;
+  width:106px;
+  border:0;
+
+}
+
+.what p.title{
+  color: $darkText;
+  margin:40px auto;
+  width:300px;
+  line-height:26px;
+  letter-spacing:0;
+  font-size:16px;
+  font-weight:300;
+  text-align:center;
+}
+
+.what h2{
+  text-align:center;
+  margin-top:25px;
+  font-size:26px;
+  color:$darkText;
+  line-height:1.2;
+  letter-spacing:6px;
+  width:100%;
+  position:relative;
+  font-weight:400;
+}
+
+.what p{
+  text-align:center;
+  font-size:16px;
+  width:250px;
+  margin:30px auto;
+  color:$medText;
+  line-height:26px;
+  letter-spacing:0;
+  position:relative;
+  font-weight:300;
+}
+
+.what .column-one{
+  /*margin-top:40px;*/
+  width:300px;
+  float:left;
+  margin-bottom:70px;
+  height:$columnHeight;
+}
+
+/*.what .column-one .circle-one{
+  height: 100px;
+  position:relative;
+  margin:0 auto;
+  border:2px solid #f0f0f0;
+  background: url(../images/icons/responsive.png) $whitish no-repeat center center;
+  -moz-border-radius:100px;
+  -webkit-border-radius:100px;
+  border-radius: 100px;
+  width: 100px;
+  cursor:pointer;
+    -webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+
+.what .column-one .circle-one:hover{
+  border:2px solid $activeColor;
+
+}*/
+
+.what .column-two{
+  /*margin-top:40px;*/
+  width:300px;
+  float:left;
+  margin-bottom:70px;
+  height:$columnHeight;
+}
+
+/*.what .column-two .circle-two{
+  height: 100px;
+  position:relative;
+  margin:0 auto;
+  border:2px solid #f0f0f0;
+  background: url(../images/icons/minimalist.png) $whitish no-repeat center center;
+  -moz-border-radius:100px;
+  -webkit-border-radius:100px;
+  border-radius: 100px;
+  width: 100px;
+    cursor:pointer;
+    -webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}*/
+
+/*.what .column-two .circle-two:hover{
+  border:2px solid $activeColor;
+}*/
+
+
+.what .column-three{ 
+  /*margin-top:40px;*/
+  width:300px;
+  float:left;
+  margin-bottom:70px;
+  height:$columnHeight;
+}
+
+/*.what .column-three .circle-three{ 
+  height: 100px;
+  position:relative;
+  margin:0 auto;
+  border:2px solid #f0f0f0;
+  background: url(../images/icons/free.png) $whitish no-repeat center center;
+  -moz-border-radius:100px;
+  -webkit-border-radius:100px;
+  border-radius: 100px;
+  width: 100px;
+  cursor:pointer;
+  -webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+
+.what .column-three .circle-three:hover{ 
+  border:2px solid $activeColor;
+}
+*/
+
+
+/* Portfolio */
+
+
+.portfolio{
+  position:relative;
+  width:100%;
+  background:#f3f3f3;
+  z-index:10;
+
+}
+
+.portfolio .portfolio-margin{
+  position:relative;
+  width:900px;
+  overflow:hidden;
+  margin:0 auto;
+}
+
+.portfolio .portfolio-margin .read-more{
+  width:183px;
+  height:47px;
+  position:relative;
+  margin:50px auto 100px;
+  line-height:47px;
+  border:1px solid #333333;
+  text-transform:uppercase;
+  text-align:center;
+  color:#333333;
+  cursor:pointer;
+  font-size:14px;
+  background:none;
+  -webkit-transition: all 0.6s ease-in;
+	-moz-transition: all 0.6s ease-in;
+	-ms-transition: all 0.6s ease-in;
+	-o-transition: all 0.6s ease-in;
+	transition: all 0.6s ease-in;
+	letter-spacing:1px;
+}
+
+.portfolio .portfolio-margin .read-more:hover{
+  background:$activeColor;
+  color:$whitish;
+  border:1px solid $activeColor;
+}
+
+.portfolio .portfolio-margin h1{
+  font-size:34px;
+  color:$darkText;
+  text-align:center;
+  margin-top:$headerMargin;
+  letter-spacing:6px;
+  font-weight:bold;
+  text-transform:uppercase;
+  line-height:1.2;
+}
+
+.portfolio .portfolio-margin hr{
+  color: $darkText;
+  margin-top:30px;
+  background-color: $darkText;
+  height: 1px;
+  width:106px;
+  border:0;
+}
+
+
+
+
+/* Portfolio grid */
+
+.grid{
+  margin-top:70px;
+  width:100%;
+  position:relative;
+  margin-bottom:70px;
+  overflow:hidden;
+}
+
+.grid li{
+  width:285px;
+  margin:0 15px 15px 0;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid img{
+  width:285px;
+  float: left;
+  position: relative;
+}
+
+.grid .text {
+  position: absolute;
+  width: 285px;
+  height:100%;
+  background: $activeColor;
+  z-index: 2;
+  opacity:0;
+    -webkit-transition: all 0.6s ease-in;
+	-moz-transition: all 0.6s ease-in;
+	-ms-transition: all 0.6s ease-in;
+	-o-transition: all 0.6s ease-in;
+	transition: all 0.6s ease-in;
+}
+
+.grid .text:hover {
+  opacity:1;
+}
+
+.grid .no-text {
+  position: absolute;
+  width: 285px;
+  height:100%;
+  background: rgba(173,160,116,0.5);
+  z-index: 2;
+  opacity:0;
+  -webkit-transition: all 0.6s ease-in;
+	-moz-transition: all 0.6s ease-in;
+	-ms-transition: all 0.6s ease-in;
+	-o-transition: all 0.6s ease-in;
+	transition: all 0.6s ease-in;
+}
+
+.grid .no-text:hover {
+  opacity:1;
+}
+
+.grid p {
+  font-size: 18px;
+  text-align:center;
+  line-height:26px;
+  margin-top:40px;
+  font-weight: bold;
+  letter-spacing:1px;
+  color: #FFF;
+}
+
+.grid p.description {
+  font-size: 12px;
+  width:300px;
+  margin-top:20px;
+  text-align:center;
+  line-height:20px;
+  font-weight: 400;
+  color: #FFF;
+  position:relative;
+}
+
+.clear { 
+    clear:both; 
+}
+
+/* Bio */
+
+.bio{
+  position:relative;
+  width:100%;
+  z-index:10;
+  height:400px;
+  background:url($secondBgImage) 0px 0px fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bio .opacity{
+  position:absolute;
+  width:100%;
+  height:400px;
+  background:rgba(79,79,79,0.6);
+}
+
+.bio .content{
+  position:absolute;
+  width:900px;
+  height:190px;
+  margin:auto;
+  margin-top:$headerMargin;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+.bio hr{
+  color: $whitish;
+  margin-top:30px;
+  background-color: $whitish;
+  height: 1px;
+  width:106px;
+  border:0;
+
+}
+.bio h2{
+  font-size:34px;
+  color:$whitish;
+  font-weight:400;
+  text-transform:uppercase;
+  letter-spacing:6px;
+  line-height:1.2;
+  text-align:center;
+}
+
+.bio p{
+  text-align: center;
+}
+
+.bio .logo{
+  position:relative;
+  width:900px;
+  overflow:hidden;
+  margin-top:50px;
+  text-align:center;
+}
+
+.bio .logo img{
+  opacity:0.5;
+  -webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+
+.bio .logo img:hover{
+  opacity:1;
+}
+
+/* Contact */
+
+.contact{
+  position:relative;
+  width:100%;
+  background:$whitish;
+  z-index:10;
+  overflow:hidden;
+  margin-bottom: 300px;  
+}
+
+
+.contact .content{
+  position:relative;
+  width:900px;
+  overflow:hidden;
+  margin: 60px auto 65px auto;
+}
+
+.contact h1{
+  font-size:34px;
+  color:$darkText;
+  text-align:center;
+  margin-top:$headerMargin;
+  letter-spacing:6px;
+  font-weight:bold;
+  text-transform:uppercase;
+  line-height:1.2;
+}
+
+.contact hr{
+  color: $darkText;
+  margin-top:30px;
+  background-color: $darkText;
+  height: 1px;
+  width:106px;
+  border:0;
+}
+
+.contact .content .form{
+  width:455px;
+  overflow:hidden;
+  height:auto;
+  float:left;
+}
+
+.contact .content .form .column{
+  width:180px;
+  overflow:hidden;
+  height:auto;
+  float:left;
+  letter-spacing:1px;
+  margin-bottom:30px;
+}
+
+.contact .content .form .column-2{
+  width:210px;
+  padding-left:60px;
+  overflow:hidden;
+  height:auto;
+  float:left;
+  letter-spacing:1px;
+  margin-bottom:30px;  
+}
+
+.contact .content .form .column-3{
+  width:450px;
+  overflow:hidden;
+  height:auto;
+  float:left;
+  letter-spacing:1px;
+}
+
+.contact .content .contact-text{
+  width:600px;
+  overflow:hidden;
+  height:auto;
+  font-weight:300;
+  float:left;
+  padding-left:40px;
+  color:$darkText;
+  line-height:26px;
+}
+
+.contact .content .contact-links{
+  padding-left:40px;
+  
+}
+ 
+
+
+
+/* Footer */
+
+
+.footer{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background:$backColor;
+}
+
+.footer .logo{
+
+  position:relative;
+  width:58px;
+  height:58px;
+  margin: 0 auto;
+  padding-top:50px;
+
+}
+
+.footer .menu-footer{
+  width:80%;
+  text-align:center;
+  margin:0 auto;
+  padding-top:30px;
+  overflow: hidden;
+  position:relative;  
+}
+
+
+.footer .menu-footer a{
+  line-height:46px;
+  padding:10px;
+  color:$lightText;
+  -webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+
+.footer .menu-footer a:hover{
+  color:$activeColor;
+}
+
+
+.footer .copyright{
+  width:80%;
+  position:relative;
+  font-weight:300;
+  margin:0 auto;
+  padding:30px 0 50px;
+  text-align:center;
+  font-size:14px;
+  line-height:36px;
+  color:$lightText;
+}
+

@@ -32,3 +32,9 @@ node_modules
 #Sublime stuff
 *.sublime-project
 *.sublime-workspace
+
+#archives
+*.zip
+
+#release folder
+release
