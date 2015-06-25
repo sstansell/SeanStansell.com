@@ -9,7 +9,7 @@
 
 
 /* iPad (portrait) */
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 579px) {
 .start-page{
 
   background:url($mainBgImageMed) #000 bottom center fixed no-repeat;
@@ -66,15 +66,15 @@ h1 {
   width:300px;
 }
 
-.partners .content{
+.bio .content{
   width:300px;
 }
 
-.partners .logo {
+.bio .logo {
   width:300px;
 }
 
-.partners .logo img {
+.bio .logo img {
   width:80px;
   padding-bottom:20px;
 }
@@ -142,7 +142,7 @@ textarea{
   width:540px;
 }
 
-.partners .logo img {
+.bio .logo img {
   padding-bottom:20px;
 }
 
@@ -189,15 +189,15 @@ h1 {
   width:300px;
 }
 
-.partners .content{
+.bio .content{
   width:400px;
 }
 
-.partners .logo {
+.bio .logo {
   width:400px;
 }
 
-.partners .logo img {
+.bio .logo img {
   width:80px;
   padding-bottom:20px;
 }
@@ -296,11 +296,11 @@ textarea{
   width:600px;
 }
 
-.partners .content{
+.bio .content{
   width:700px;
 }
 
-.partners .logo {
+.bio .logo {
   width:700px;
 }
 

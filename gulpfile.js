@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var minifyHTML = require('gulp-minify-html');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
@@ -23,4 +24,15 @@ gulp.task('sass', function() {
         .pipe(sass())
         .pipe(gulp.dest("dev/css"))
         .pipe(browserSync.stream());
+});
+
+gulp.task('minify-html', function() {
+  var opts = {
+    conditionals: true,
+    spare:true
+  };
+ 
+  return gulp.src('./dev/index.html')
+    .pipe(minifyHTML(opts))
+    .pipe(gulp.dest('./release/'));
 });

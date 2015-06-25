@@ -7,8 +7,6 @@
 --
 */
 
-/* Font Google - strong reaload time */
-@import url(http://fonts.googleapis.com/css?family=Lato:400,300,100,700,900&subset=latin,latin-ext);
 
 
 /*
@@ -16,96 +14,6 @@
  * Author: Thomsoon
  * Created: 14/11/2014
  */
-
-sup {
-    vertical-align: super;
-    font-size: smaller;
-} 
-.preloader{
-  position:fixed;
-  width:100%;
-  height:100%;
-  background:$whitish;
-  z-index:99999;
-}
- 
-.preloader .item{
-  position:absolute;
-  width:100px;
-  height:100px;
-  left:50%;
-  top:50%;
-  margin-left:-50px;
-  margin-top:-50px;
-} 
-
-
-html, body{
-  font-family: 'Lato', sans-serif;
-  font-size:15px;
-  -webkit-font-smoothing: subpixel-antialiased!important;
-  color:$darkText;
-  font-weight:400;
-  height:100%;
-}
-
-a{
-  text-decoration:none;
-  outline:none;
-  font-size:14px;
-}
-
-h1{
-  font-size:3rem;
-  color:$whitish;
-  font-weight:400;
-  text-transform:uppercase;
-  letter-spacing:6px;
-  line-height:1.2;
-}
-h2{
-  font-size:1.0rem;
-  color:$whitish;
-  font-weight:400;
-  /*text-transform:uppercase;*/
-  letter-spacing:6px;
-  line-height:1.2;
-}
-p{
-  font-size:14px;
-  color:$whitish;
-  font-weight:300;
-  letter-spacing:1px;
-  margin-top:40px;
-}
-
-
-h1 span{
-  color:#2fa68e;
-}
-
-
-::selection {
-  background: $activeColor;
-  color:$whitish;
-}
-
-::-moz-selection {
-  background: $activeColor;
-  color:$whitish;
-}
-
-
-.container{
-  position:absolute;
-  width:100%;
-  height:100%;
-}
-
-
-
-
-
 
 /* Start page */
 
@@ -115,10 +23,21 @@ h1 span{
   height:100%;
   z-index:10;
   background:url($mainBgImage) rgba(79,79,79,0.6) bottom center fixed no-repeat;
+
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.start-page h2{
+  font-size:22px;
+  text-transform: uppercase;
+  opacity:1;
+  color:$whitish;
+  font-weight:300;
+  letter-spacing:1px;
+  margin-top:40px;
 }
 
 .start-page hr{
@@ -135,7 +54,7 @@ h1 span{
   position:absolute;
   width:100%;
   height:100%;
-  background:rgba(51,51,51,0.9); /* Standard Off */
+  background:rgba(0,0,0,0.7); /* Standard Off */
 }
 
 
@@ -226,151 +145,29 @@ h1 span{
 }
 
 
-/* Menu mobile */
-
-.menu-media{
-  position:relative;
-  width:100%;
-  height:90px;
-  background:$activeColor;
-  z-index:1000;
-  display:none;
-}
-
-.menu-media .menu-content{
-  width:280px;
-  position:relative;
-  margin:0 auto;
-}
-
-.menu-media .menu-content .logo {
-   color:$whitish;
-   font-weight:700;
-   font-size:24px;
-   width:200px;
-   line-height:90px;
-   float:left;
-   list-style: none;
-}
-
-.menu-media .menu-content .icon{
-  width:41px;
-  height:23px;
-  float:right;
-  line-height:100px;
-}
-
-.menu-click{
-  display:none;
-}
 
 
-.menu-click li {
-  position:relative;
-  width:100%;
-  height:70px;
-  color:#333333;
-  font-size:18px;
-  text-align:center;
-  line-height:70px;
-  z-index:1000;
-  border-bottom:1px solid #f2f2f2;
-  -webkit-transition: all 0.2s ease-in;
-	-moz-transition: all 0.2s ease-in;
-	-ms-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in;
- }
+/* What I Do secion */
 
-.menu-click li:hover {
-  color:$activeColor;
- }
-
-
-/* Menu */
-
-.menu{
-  position:relative;
-  width:100%;
-  height:60px;
-  background:$whitish;
-  border-bottom:1px solid #f2f2f2;
-  z-index:1000;
-}
-
-.menu-content{
-  width:900px;
-  position:relative;
-  margin:0 auto;
-}
-
-.menu-content .logo {
-   color:#333;
-   font-weight:700;
-   font-size:24px;
-   width:300px;
-   line-height:60px;
-   float:left;
-   list-style: none;
- }
-
-.menu-content ul{
-
-  width:500px;
-  left:50%;
-  float:right;
-  text-align:right;
-  list-style:none;
-}
-
-.menu-content li{
-   display:inline-block;
-   position:relative;
-}
-
-.menu-content li a{
-  color:#333;
-  font-size:16px;
-  display: block;
-  padding: 0 20px 0 20px;
-  line-height:60px;
-  -webkit-transition: all 0.2s ease-in;
-	-moz-transition: all 0.2s ease-in;
-	-ms-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in;
-}
-
-.menu-content li.active a{
-  color:$activeColor;
-}
-
-.menu-content li a:hover{
-  color:$activeColor;
-}
-
-
-/* About us */
-
-.about-us{
+.what{
   position:relative;
   width:100%;
   background:$whitish;
   z-index:10;
 }
 
-.about-us .content{
+.what .content{
   position:relative;
   width:900px;
   margin: 0 auto;
   overflow: hidden;
 }
 
-.about-us h1{
+.what h1{
   font-size:34px;
   color:$darkText;
   text-align:center;
-  margin-top:60px;
+  margin-top:$headerMargin;
   letter-spacing:6px;
   font-weight:bold;
   text-transform:uppercase;
@@ -378,7 +175,7 @@ h1 span{
 
 }
 
-.about-us hr{
+.what hr{
   color: $darkText;
   margin-top:30px;
   background-color: $darkText;
@@ -388,18 +185,18 @@ h1 span{
 
 }
 
-.about-us p.title{
-  color: $lightText;
+.what p.title{
+  color: $darkText;
   margin:40px auto;
   width:300px;
   line-height:26px;
   letter-spacing:0;
-  font-size:14px;
+  font-size:16px;
   font-weight:300;
   text-align:center;
 }
 
-.about-us h2{
+.what h2{
   text-align:center;
   margin-top:25px;
   font-size:26px;
@@ -411,19 +208,19 @@ h1 span{
   font-weight:400;
 }
 
-.about-us p{
+.what p{
   text-align:center;
-  font-size:14px;
+  font-size:16px;
   width:250px;
   margin:30px auto;
-  color:$lightText;
+  color:$medText;
   line-height:26px;
   letter-spacing:0;
   position:relative;
   font-weight:300;
 }
 
-.about-us .column-one{
+.what .column-one{
   /*margin-top:40px;*/
   width:300px;
   float:left;
@@ -431,7 +228,7 @@ h1 span{
   height:$columnHeight;
 }
 
-.about-us .column-one .circle-one{
+/*.what .column-one .circle-one{
   height: 100px;
   position:relative;
   margin:0 auto;
@@ -449,12 +246,12 @@ h1 span{
 	transition: all 0.2s ease-in;
 }
 
-.about-us .column-one .circle-one:hover{
+.what .column-one .circle-one:hover{
   border:2px solid $activeColor;
 
-}
+}*/
 
-.about-us .column-two{
+.what .column-two{
   /*margin-top:40px;*/
   width:300px;
   float:left;
@@ -462,7 +259,7 @@ h1 span{
   height:$columnHeight;
 }
 
-.about-us .column-two .circle-two{
+/*.what .column-two .circle-two{
   height: 100px;
   position:relative;
   margin:0 auto;
@@ -478,14 +275,14 @@ h1 span{
 	-ms-transition: all 0.2s ease-in;
 	-o-transition: all 0.2s ease-in;
 	transition: all 0.2s ease-in;
-}
+}*/
 
-.about-us .column-two .circle-two:hover{
+/*.what .column-two .circle-two:hover{
   border:2px solid $activeColor;
-}
+}*/
 
 
-.about-us .column-three{ 
+.what .column-three{ 
   /*margin-top:40px;*/
   width:300px;
   float:left;
@@ -493,7 +290,7 @@ h1 span{
   height:$columnHeight;
 }
 
-.about-us .column-three .circle-three{ 
+/*.what .column-three .circle-three{ 
   height: 100px;
   position:relative;
   margin:0 auto;
@@ -511,10 +308,10 @@ h1 span{
 	transition: all 0.2s ease-in;
 }
 
-.about-us .column-three .circle-three:hover{ 
+.what .column-three .circle-three:hover{ 
   border:2px solid $activeColor;
 }
-
+*/
 
 
 /* Portfolio */
@@ -566,7 +363,7 @@ h1 span{
   font-size:34px;
   color:$darkText;
   text-align:center;
-  margin-top:60px;
+  margin-top:$headerMargin;
   letter-spacing:6px;
   font-weight:bold;
   text-transform:uppercase;
@@ -696,21 +493,34 @@ h1 span{
   width:900px;
   height:190px;
   margin:auto;
-  margin-top:60px;
+  margin-top:$headerMargin;
   top:0;
   bottom:0;
   left:0;
   right:0;
 }
 
+.bio hr{
+  color: $whitish;
+  margin-top:30px;
+  background-color: $whitish;
+  height: 1px;
+  width:106px;
+  border:0;
+
+}
 .bio h2{
-  font-size:3rem;
+  font-size:34px;
   color:$whitish;
   font-weight:400;
   text-transform:uppercase;
   letter-spacing:6px;
   line-height:1.2;
   text-align:center;
+}
+
+.bio p{
+  text-align: center;
 }
 
 .bio .logo{
@@ -757,7 +567,7 @@ h1 span{
   font-size:34px;
   color:$darkText;
   text-align:center;
-  margin-top:60px;
+  margin-top:$headerMargin;
   letter-spacing:6px;
   font-weight:bold;
   text-transform:uppercase;
@@ -808,78 +618,18 @@ h1 span{
 }
 
 .contact .content .contact-text{
-  width:405px;
+  width:600px;
   overflow:hidden;
   height:auto;
   font-weight:300;
   float:left;
   padding-left:40px;
   color:$darkText;
-  font-size:14px;
   line-height:26px;
 }
-
-strong{
-  font-weight:700;
-
-}
-
-input{
-
-  width:180px;
-  height:40px;
-  background:#f8f7f7;
-  border-top:1px solid #333;
-  border-bottom:0;
-  border-left:0;
-  border-right:0;
-  color:#333;
-  font-weight:300;
-  line-height:40px;
-  padding-left:15px;
-  font-family: 'Lato', sans-serif;
-  font-size:14px;
-  margin-bottom:10px;
-}
-
-input:focus{background:#f4f4f4;}
-
-textarea{
-
-  width:420px;
-  height:150px;
-  border-top:1px solid #333;
-  border-bottom:0;
-  line-height:20px;
-  border-left:0;
-  border-right:0;
-  background:#f8f7f7;
-  color:#333;
-  font-weight:300;
-  padding:15px 0 0 15px;
-  font-family: 'Lato', sans-serif;
-  font-size:14px;
-  margin-bottom:10px;
-}
-
-textarea:focus{background:#f4f4f4;}
+ 
 
 
-input.submit{
-  width:100px;
-  height:34px;
-  float:right;
-  margin:20px 10px 0 0;
-  border:0;
-  font-weight:700;
-  text-align:right;
-  background:none;
-  -webkit-transition: all 0.6s ease-in;
-	-moz-transition: all 0.6s ease-in;
-	-ms-transition: all 0.6s ease-in;
-	-o-transition: all 0.6s ease-in;
-	transition: all 0.6s ease-in;
-}
 
 /* Footer */
 
