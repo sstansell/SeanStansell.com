@@ -15,6 +15,10 @@
  * Created: 14/11/2014
  */
 
+
+/** Common Components */
+
+
 /* Start page */
 
 .start-page{
@@ -210,7 +214,7 @@
 
 .what p{
   text-align:center;
-  font-size:16px;
+  font-size:18px;
   width:250px;
   margin:30px auto;
   color:$medText;
@@ -325,14 +329,18 @@
 
 }
 
-.portfolio .portfolio-margin{
+.portfolio .content{
   position:relative;
   width:900px;
   overflow:hidden;
   margin:0 auto;
 }
 
-.portfolio .portfolio-margin .read-more{
+.portfolio .content img{
+  width: 100%;
+  height: auto;
+}
+.portfolio .content .read-more{
   width:183px;
   height:47px;
   position:relative;
@@ -353,13 +361,13 @@
 	letter-spacing:1px;
 }
 
-.portfolio .portfolio-margin .read-more:hover{
+.portfolio .content .read-more:hover{
   background:$activeColor;
   color:$whitish;
   border:1px solid $activeColor;
 }
 
-.portfolio .portfolio-margin h1{
+.portfolio .content h1{
   font-size:34px;
   color:$darkText;
   text-align:center;
@@ -369,8 +377,20 @@
   text-transform:uppercase;
   line-height:1.2;
 }
+.portfolio .content h2{
+  text-align:center;
+  text-transform: uppercase;
+  margin-top:25px;
+  font-size:26px;
+  color:$darkText;
+  line-height:1.2;
+  letter-spacing:6px;
+  width:100%;
+  position:relative;
+  font-weight:400;
+}
 
-.portfolio .portfolio-margin hr{
+.portfolio .content hr{
   color: $darkText;
   margin-top:30px;
   background-color: $darkText;
@@ -378,7 +398,34 @@
   width:106px;
   border:0;
 }
+.portfolio .column-one{
+  /*margin-top:40px;*/
+  width:250px;
+  margin-left: 25px;
+  margin-right: 25px;
+  float:left;
+  margin-bottom:70px;
+  height:$columnHeight;
+}
+.portfolio .column-two{
+  /*margin-top:40px;*/
+  width:250px;
+  margin-left: 25px;
+  margin-right: 25px;
+  float:left;
+  margin-bottom:70px;
+  height:$columnHeight;
+}
 
+.portfolio .column-three{
+  /*margin-top:40px;*/
+  width:250px;
+  margin-left: 25px;
+  margin-right: 25px;
+  float:left;
+  margin-bottom:70px;
+  height:$columnHeight;
+}
 
 
 
@@ -521,8 +568,11 @@
 
 .bio p{
   text-align: center;
-}
 
+}
+ .bio .title{
+    line-height: 1.8;
+  }
 .bio .logo{
   position:relative;
   width:900px;
@@ -555,12 +605,11 @@
   margin-bottom: 300px;  
 }
 
-
 .contact .content{
   position:relative;
   width:900px;
-  overflow:hidden;
-  margin: 60px auto 65px auto;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .contact h1{
@@ -572,6 +621,7 @@
   font-weight:bold;
   text-transform:uppercase;
   line-height:1.2;
+
 }
 
 .contact hr{
@@ -581,58 +631,79 @@
   height: 1px;
   width:106px;
   border:0;
+
 }
 
-.contact .content .form{
-  width:455px;
-  overflow:hidden;
-  height:auto;
-  float:left;
-}
-
-.contact .content .form .column{
-  width:180px;
-  overflow:hidden;
-  height:auto;
-  float:left;
-  letter-spacing:1px;
-  margin-bottom:30px;
-}
-
-.contact .content .form .column-2{
-  width:210px;
-  padding-left:60px;
-  overflow:hidden;
-  height:auto;
-  float:left;
-  letter-spacing:1px;
-  margin-bottom:30px;  
-}
-
-.contact .content .form .column-3{
-  width:450px;
-  overflow:hidden;
-  height:auto;
-  float:left;
-  letter-spacing:1px;
-}
-
-.contact .content .contact-text{
-  width:600px;
-  overflow:hidden;
-  height:auto;
-  font-weight:300;
-  float:left;
-  padding-left:40px;
-  color:$darkText;
+.contact p.title{
+  color: $darkText;
+  margin:40px auto;
+  width:300px;
   line-height:26px;
+  letter-spacing:0;
+  font-size:16px;
+  font-weight:300;
+  text-align:center;
 }
 
-.contact .content .contact-links{
-  padding-left:40px;
-  
+.contact h2{
+  text-align:center;
+  margin-top:25px;
+  font-size:26px;
+  color:$darkText;
+  line-height:1.2;
+  letter-spacing:6px;
+  width:100%;
+  position:relative;
+  font-weight:400;
 }
- 
+
+.contact p{
+  text-align:center;
+  /*width:250px;*/
+  margin:30px auto;
+  color:$medText;
+  line-height:26px;
+  letter-spacing:0;
+  position:relative;
+  font-weight:300;
+}
+.contact ul{
+  text-align:left;
+  /*width:250px;*/
+  margin:30px auto;
+  color:$medText;
+  line-height:26px;
+  letter-spacing:0;
+  position:relative;
+  font-weight:300;
+}
+.contact .column-one{
+  /*margin-top:40px;*/
+  width:300px;
+  float:left;
+  margin-bottom:70px;
+  height:$columnHeight;
+}
+.contact .column-two{
+  /*margin-top:40px;*/
+  width:300px;
+  float:left;
+  margin-bottom:70px;
+  height:$columnHeight;
+}
+
+.contact .column-three{
+  /*margin-top:40px;*/
+  width:300px;
+  float:left;
+  margin-bottom:70px;
+  height:$columnHeight;
+}
+
+
+
+
+
 
 
 
