@@ -467,34 +467,34 @@ input.submit {
 @-webkit-keyframes bounce-fade {
   0% {
     opacity: 0;
-    bottom: 70px; }
+    bottom: 125px; }
   100% {
     opacity: 1;
-    bottom: 35px; } }
+    bottom: 40px; } }
 
 @-moz-keyframes bounce-fade {
   0% {
     opacity: 0;
-    bottom: 70px; }
+    bottom: 125px; }
   100% {
     opacity: 1;
-    bottom: 35px; } }
+    bottom: 40px; } }
 
 @-o-keyframes bounce-fade {
   0% {
     opacity: 0;
-    bottom: 70px; }
+    bottom: 125px; }
   100% {
     opacity: 1;
-    bottom: 35px; } }
+    bottom: 40px; } }
 
 @keyframes bounce-fade {
   0% {
     opacity: 0;
-    bottom: 70px; }
+    bottom: 125px; }
   100% {
     opacity: 1;
-    bottom: 35px; } }
+    bottom: 40px; } }
 
 /* What I Do secion */
 .what {
