@@ -49,8 +49,8 @@
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     
-    $(".footer").css( "position", "relative" );
-    $(".contact").css( "marginBottom", "0" );
+    //$(".footer").css( "position", "relative" );
+    //$(".contact").css( "marginBottom", "400px" );
 
 }
 else 
@@ -59,13 +59,14 @@ else
   // FadeTo elements
   if ( $(window).width() > 1023) {  
 
-    tiles = $("h2, h3, .column-one, .column-two, .column-three, .grid li, .contact .content .form, .contact .content .contact-text ").fadeTo(0, 0);
+    //tiles = $("h2, h3, .column-one, .column-two, .column-three, .grid li, .contact .content .form, .contact .content .contact-text ").fadeTo(0, 0);
+    tiles = $(".what, .portfolio, .bio, .contact").fadeTo(0, 0);
 
     $(window).scroll(function(d,h) {
       tiles.each(function(i) {
           a = $(this).offset().top + $(this).height();
-          b = $(window).scrollTop() + $(window).height();
-          if (a < b) $(this).fadeTo(1000,1);
+          b = $(window).scrollTop() + $(window).height() + 500;
+          if (a < b) $(this).fadeTo(750,1);
       });
     });
 
@@ -74,18 +75,17 @@ else
 }
 
 
-
-  //Menu mobile click
+/*  //Menu mobile click
   $( ".icon" ).click(function() {
     $( " ul.menu-click" ).slideToggle( "slow", function() {
     // Animation complete.
     });
   });
+*/
 
+/*$(window).load(function(){
 
-$(window).load(function(){
-
-$(".preloader").delay(1000).fadeOut("slow");
+  $(".preloader").delay(1000).fadeOut("slow");
 
   // Parallax
   if ($('.parallax-background').length) {
@@ -97,4 +97,4 @@ $(".preloader").delay(1000).fadeOut("slow");
     $(".parallax-background-partners").parallax();
   }  
 
-});
+});*/
