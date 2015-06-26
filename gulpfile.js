@@ -43,7 +43,7 @@ gulp.task('scripts', ['clean'], function() {
   .pipe(jshint.reporter('default'))
   .pipe(uglify())
   .pipe(concat('script.js'))
-  .pipe(gzip({ append: true }))
+  //.pipe(gzip({ append: true }))
   .pipe(gulp.dest(bases.dist + 'js/'));
 });
 
@@ -78,7 +78,7 @@ gulp.task('copy', ['clean'], function() {
 });
 
 // Define the build task as a sequence of the above tasks
-gulp.task('build', ['clean', 'scripts', 'imagemin', 'sass', 'copy', 'minify-html']);
+gulp.task('build', ['clean', 'scripts', 'imagemin', 'sass-release', 'copy', 'minify-html']);
 
 // start a dev server on the RELEASE code
 gulp.task('serve-release', ['build'], function() {
@@ -104,6 +104,13 @@ gulp.task('serve', ['sass'], function() {
   gulp.watch(['*.html', 'styles/**/*.css', 'scripts/**/*.js'], {cwd: 'dev'}, reload);
 });
 
+// Compile sass into CSS & auto-inject into browsers (compressed for release)
+gulp.task('sass-release', function() {
+    return gulp.src("dev/sass/style.scss")
+        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(gulp.dest("dev/css"))
+        .pipe(browserSync.stream());
+});
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
     return gulp.src("dev/sass/style.scss")
