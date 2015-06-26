@@ -105,7 +105,7 @@ gulp.task('serve', ['sass'], function() {
 });
 
 // Compile sass into CSS & auto-inject into browsers (compressed for release)
-gulp.task('sass-release', function() {
+gulp.task('sass-release', ['clean'], function() {
     return gulp.src("dev/sass/style.scss")
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(gulp.dest("dev/css"))
