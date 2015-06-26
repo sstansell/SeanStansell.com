@@ -18,9 +18,16 @@ $darkText: #212121;
 $medText: #757575;
 $lightText: #a4a4a4;
 
+/** GRID */
+
+	$containerWidth: 960px;
+
 
 /** COLUMNS */
 $columnHeight: 100%;
+$columnMarginBottom: 70px;
+$columnMarginSides: 3%;
+
 
 /** MARGIN */
 $headerMargin: 60px;

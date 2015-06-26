@@ -17,7 +17,13 @@
 
 
 /** Common Components */
-
+.content{
+  position:relative;
+  width:$containerWidth;
+  margin: 0 auto;
+  overflow: hidden;
+    padding-bottom: $columnMarginBottom;
+}
 
 /* Start page */
 
@@ -63,9 +69,7 @@
 
 
 .start-page .content{
-  position:relative;
   width:700px;
-  margin:0 auto;
   height:100%;
 }
 
@@ -158,13 +162,11 @@
   width:100%;
   background:$whitish;
   z-index:10;
+
 }
 
 .what .content{
-  position:relative;
-  width:900px;
-  margin: 0 auto;
-  overflow: hidden;
+
 }
 
 .what h1{
@@ -191,8 +193,8 @@
 
 .what p.title{
   color: $darkText;
-  margin:40px auto;
-  width:300px;
+  /*margin:40px auto;
+  width:300px;*/
   line-height:26px;
   letter-spacing:0;
   font-size:16px;
@@ -215,8 +217,8 @@
 .what p{
   text-align:center;
   font-size:18px;
-  width:250px;
-  margin:30px auto;
+  /*width:250px;
+  margin:30px auto;*/
   color:$medText;
   line-height:26px;
   letter-spacing:0;
@@ -224,98 +226,6 @@
   font-weight:300;
 }
 
-.what .column-one{
-  /*margin-top:40px;*/
-  width:300px;
-  float:left;
-  margin-bottom:70px;
-  height:$columnHeight;
-}
-
-/*.what .column-one .circle-one{
-  height: 100px;
-  position:relative;
-  margin:0 auto;
-  border:2px solid #f0f0f0;
-  background: url(../images/icons/responsive.png) $whitish no-repeat center center;
-  -moz-border-radius:100px;
-  -webkit-border-radius:100px;
-  border-radius: 100px;
-  width: 100px;
-  cursor:pointer;
-    -webkit-transition: all 0.2s ease-in;
-	-moz-transition: all 0.2s ease-in;
-	-ms-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in;
-}
-
-.what .column-one .circle-one:hover{
-  border:2px solid $activeColor;
-
-}*/
-
-.what .column-two{
-  /*margin-top:40px;*/
-  width:300px;
-  float:left;
-  margin-bottom:70px;
-  height:$columnHeight;
-}
-
-/*.what .column-two .circle-two{
-  height: 100px;
-  position:relative;
-  margin:0 auto;
-  border:2px solid #f0f0f0;
-  background: url(../images/icons/minimalist.png) $whitish no-repeat center center;
-  -moz-border-radius:100px;
-  -webkit-border-radius:100px;
-  border-radius: 100px;
-  width: 100px;
-    cursor:pointer;
-    -webkit-transition: all 0.2s ease-in;
-	-moz-transition: all 0.2s ease-in;
-	-ms-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in;
-}*/
-
-/*.what .column-two .circle-two:hover{
-  border:2px solid $activeColor;
-}*/
-
-
-.what .column-three{ 
-  /*margin-top:40px;*/
-  width:300px;
-  float:left;
-  margin-bottom:70px;
-  height:$columnHeight;
-}
-
-/*.what .column-three .circle-three{ 
-  height: 100px;
-  position:relative;
-  margin:0 auto;
-  border:2px solid #f0f0f0;
-  background: url(../images/icons/free.png) $whitish no-repeat center center;
-  -moz-border-radius:100px;
-  -webkit-border-radius:100px;
-  border-radius: 100px;
-  width: 100px;
-  cursor:pointer;
-  -webkit-transition: all 0.2s ease-in;
-	-moz-transition: all 0.2s ease-in;
-	-ms-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in;
-}
-
-.what .column-three .circle-three:hover{ 
-  border:2px solid $activeColor;
-}
-*/
 
 
 /* Portfolio */
@@ -330,10 +240,7 @@
 }
 
 .portfolio .content{
-  position:relative;
-  width:900px;
-  overflow:hidden;
-  margin:0 auto;
+
 }
 
 .portfolio .content img{
@@ -537,7 +444,6 @@
 
 .bio .content{
   position:absolute;
-  width:900px;
   height:190px;
   margin:auto;
   margin-top:$headerMargin;
@@ -575,7 +481,7 @@
   }
 .bio .logo{
   position:relative;
-  width:900px;
+  width:$containerWidth;
   overflow:hidden;
   margin-top:50px;
   text-align:center;
@@ -606,10 +512,7 @@
 }
 
 .contact .content{
-  position:relative;
-  width:900px;
-  margin: 0 auto;
-  overflow: hidden;
+
 }
 
 .contact h1{
