@@ -1,5 +1,9 @@
 'use strict';
 
+/** 
+ * requirements & declarations
+ */
+
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var minifyHTML = require('gulp-minify-html');
@@ -9,16 +13,16 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var gzip = require('gulp-gzip');
- 
-
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
+//defines the environment paths to work with
 var bases = {
  app: 'dev/',
  dist: 'release/',
 };
 
+//defines the paths to various types of files in the app (used by helper functions)
 var paths = {
  scripts: ['js/**/*.js', '!js/vendor/**/*.js'],
  libs: ['js/vendor/*.js'],
@@ -29,6 +33,9 @@ var paths = {
  extras: ['crossdomain.xml', 'humans.txt', 'manifest.appcache', 'robots.txt', 'favicon.ico', '.htaccess'],
 };
 
+//////////////////////
+// HELPER FUNCTIONS //
+//////////////////////
 
 // Delete the dist directory
 gulp.task('clean', function() {
@@ -77,33 +84,6 @@ gulp.task('copy', ['clean'], function() {
    .pipe(gulp.dest(bases.dist));
 });
 
-// Define the build task as a sequence of the above tasks
-gulp.task('build', ['clean', 'scripts', 'imagemin', 'sass-release', 'copy', 'minify-html']);
-
-// start a dev server on the RELEASE code
-gulp.task('serve-release', ['build'], function() {
-    browserSync.init({
-        server: {
-            baseDir: "release"
-        },
-        ui: false,
-        ghostMode: false,
-        notify: false
-    });
-});
-
-// start a dev server, including watching files for changes and reloading
-gulp.task('serve', ['sass'], function() {
-  browserSync({
-    server: {
-      baseDir: 'dev'
-    }
-  });
-  gulp.watch("dev/sass/**/*.scss", ['sass']);
-  //gulp.watch(['*.html', 'css/**/*.css', 'js/**/*.js'], browserSync.reload);
-  gulp.watch(['*.html', 'styles/**/*.css', 'scripts/**/*.js'], {cwd: 'dev'}, reload);
-});
-
 // Compile sass into CSS & auto-inject into browsers (compressed for release)
 gulp.task('sass-release', ['clean'], function() {
     return gulp.src("dev/sass/style.scss")
@@ -128,4 +108,38 @@ gulp.task('minify-html', ['clean'], function() {
   return gulp.src('./dev/index.html')
     .pipe(minifyHTML(opts))
     .pipe(gulp.dest('./release/'));
+});
+
+
+/////////////////////////
+//BUILD AN SERVE TASKS //
+/////////////////////////
+
+
+// Define the build task as a sequence of the helper tasks 
+gulp.task('build', ['clean', 'scripts', 'imagemin', 'sass-release', 'copy', 'minify-html']);
+
+// start a dev server on the RELEASE code 
+gulp.task('serve-release', ['build'], function() {
+    browserSync.init({
+        server: {
+            baseDir: "release"
+        },
+        ui: false,
+        ghostMode: false,
+        notify: false
+    });
+});
+
+// start a dev server, including watching files for changes and reloading
+// using the DEV folder of the app
+gulp.task('serve', ['sass'], function() {
+  browserSync({
+    server: {
+      baseDir: 'dev'
+    }
+  });
+  gulp.watch("dev/sass/**/*.scss", ['sass']);
+  //gulp.watch(['*.html', 'css/**/*.css', 'js/**/*.js'], browserSync.reload);
+  gulp.watch(['*.html', 'styles/**/*.css', 'scripts/**/*.js'], {cwd: 'dev'}, reload);
 });
