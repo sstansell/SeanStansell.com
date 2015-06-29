@@ -1,5 +1,5 @@
-/** small screens */
-  @media (max-width: $containerWidth){
+/** medium/small screens */
+  @media (max-width: $mediumBreak){
     //turn off the menu
     .menu{
       display:none;
@@ -27,9 +27,34 @@
 	}
 	.bio .content{
 	  height:610px;
-	}	
+	}
+	
     h1{
     	font-size: 2.2rem;
     	font-weight:300;
     }
   }
+/** small screens */
+@media (max-width: $smallBreak){
+	/**	Utility class to show stuff only on small screens */
+	.onlySmall{
+		display:inherit;
+		
+	}
+  	.what p{
+		padding-bottom: 30px;
+		margin-top:20px;
+	}
+
+
+	.bio{
+	  height:1400px;
+	}
+	.bio .opacity{
+	  height:1400px;
+	}
+	.bio .content{
+	  height:1210px;
+	}	
+}
+
