@@ -15,18 +15,16 @@
       if (item.length) { return item; }
     });
 
-   $('a[href*=#]').bind('click', function(e) {
-	e.preventDefault();
-       
-	var target = $(this).attr("href");
-			
+    //a nifty bit of code that prevents anchors with hashes from working...
+   /*$('a[href*=#]').bind('click', function(e) {
+	   e.preventDefault();
+	   var target = $(this).attr("href");
+  	 $('html, body').stop().animate({ scrollTop: $(target).offset().top-140 }, 1000, function() {
 
-	$('html, body').stop().animate({ scrollTop: $(target).offset().top-140 }, 1000, function() {
-
-	});
+  	 });
 			
-	return false;
-   });
+	   return false;
+   });*/
 
   $(window).scroll(function(){
    var fromTop = $(this).scrollTop()+topMenuHeight;
