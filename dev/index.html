@@ -329,12 +329,32 @@
     } } }
     window.onload = loadImages('main');
 
+    //our app's object, so we don't pollute the global namespace (give a hoot!  don't pollute!)
+    var ssApp = {};
+    ssApp.slideshowsLoaded = [];
 
+    //a bunch of stuff to do when we open a modal
     $(document).on('opening', '.remodal', function () {
-      loadImages(this.getAttribute('data-remodal-id'));
-      $(".rslides").responsiveSlides({
-        pager:true
-      });
+      //get the ID of the modal we're opening
+      var remodalId = this.getAttribute('data-remodal-id');
+      //load the images for the modal (don't do this at page load so we don't waste bandwidth & time)
+      loadImages(remodalId);
+
+      //check to see if we've already started this slideshow
+      if(ssApp.slideshowsLoaded.indexOf(remodalId) === -1){
+        //setup the slideshow
+        var slideContainer = "div[data-remodal-id='" + remodalId + "'] .rslides";
+
+        $(slideContainer).responsiveSlides({
+          pager:true
+        });
+        //let the app know we've loaded this slideshow, so we don't do it again
+        ssApp.slideshowsLoaded.push(remodalId);        
+      };
+      
+
+
+
     });
   </script> 
   <!--<script>
@@ -372,7 +392,7 @@
     <div class="remodal" data-remodal-id="responsiveCMS" aria-labelledby="modalTitle" aria-describedby="modalDesc">
       <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
       <div>
-        <h2>Responsive Websites</h2>
+        <h2>Responsive Content Management System</h2>
         <p>
           In starting in late 2011, I led a project to build a Responsive Websites platform for automotive dealers in the US. That platform went live in mid-2012, and started delivering the first Responsive Websites in the dealer website industry.  Today it serves hundreds of sites to dealers all over the US, generating millions of dollars in annual revenue.  It features a patent-pending Responsive Website Editor, which allows you to edit a responsive page, and see the results across devices in real-time.
           <ul class="rslides">

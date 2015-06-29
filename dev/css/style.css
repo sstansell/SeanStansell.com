@@ -9,7 +9,7 @@
     v2.0 | 20110126 
     License: none (public domain) 
 */
-@import url(http://fonts.googleapis.com/css?family=Lato:400,100,900);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300,100);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -76,15 +76,15 @@ em {
   font-style: italic; }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #fafafa;
-  font-weight: 400;
+  font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 6px;
   line-height: 1.2; }
 
 h2 {
-  font-size: 1.0rem;
+  font-size: 2.0rem;
   color: #fafafa;
   font-weight: 400;
   /*text-transform:uppercase;*/
@@ -387,7 +387,7 @@ img.responsive {
   background-size: cover; }
 
 .start-page h1 {
-  font-weight: 900; }
+  font-family: "Lato", sans-serif; }
 
 .start-page h2 {
   font-size: 22px;
@@ -532,16 +532,6 @@ img.responsive {
   width: 106px;
   border: 0; }
 
-.what p.title {
-  color: #212121;
-  /*margin:40px auto;
-  width:300px;*/
-  line-height: 26px;
-  letter-spacing: 0;
-  font-size: 16px;
-  font-weight: 300;
-  text-align: center; }
-
 .what h2 {
   text-align: center;
   margin-top: 25px;
@@ -553,6 +543,16 @@ img.responsive {
   position: relative;
   font-weight: 400; }
 
+.what p.title {
+  color: #212121;
+  /*margin:40px auto;
+  width:300px;*/
+  line-height: 26px;
+  letter-spacing: 0;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center; }
+
 .what p {
   text-align: center;
   font-size: 18px;
@@ -562,7 +562,7 @@ img.responsive {
   line-height: 26px;
   letter-spacing: 0;
   position: relative;
-  font-weight: 400; }
+  font-weight: 300; }
 
 /* Portfolio */
 .portfolio {
@@ -1147,7 +1147,6 @@ html.remodal-is-locked {
 .remodal h2 {
   text-align: center;
   margin-top: 25px;
-  font-size: 26px;
   color: #212121;
   line-height: 1.2;
   letter-spacing: 6px;
@@ -1325,7 +1324,8 @@ html.remodal-is-locked {
   .start-page .content .text {
     width: 90%; }
   h1 {
-    font-size: 2.2rem; } }
+    font-size: 2.2rem;
+    font-weight: 300; } }
 
 @font-face {
   font-family: 'fontello';
