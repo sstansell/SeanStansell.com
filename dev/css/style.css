@@ -1077,8 +1077,8 @@ html.remodal-is-locked {
   right: 0;
   display: block;
   overflow: visible;
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   margin: 0;
   padding: 0;
   cursor: pointer;
@@ -1095,8 +1095,8 @@ html.remodal-is-locked {
 
 .remodal-close:before {
   font-family: "Lato", sans-serif;
-  font-size: 25px;
-  line-height: 35px;
+  font-size: 45px;
+  line-height: 45px;
   position: absolute;
   top: 0;
   left: 0;
