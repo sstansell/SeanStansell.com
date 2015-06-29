@@ -41,8 +41,7 @@
 }
 
 .start-page h1{
-  
-  font-weight: 900;
+  font-family: $titleFontFamily;
 }
 .start-page h2{
   font-size:22px;
@@ -194,18 +193,6 @@
   border:0;
 
 }
-
-.what p.title{
-  color: $darkText;
-  /*margin:40px auto;
-  width:300px;*/
-  line-height:26px;
-  letter-spacing:0;
-  font-size:16px;
-  font-weight:300;
-  text-align:center;
-}
-
 .what h2{
   text-align:center;
   margin-top:25px;
@@ -218,6 +205,19 @@
   font-weight:400;
 }
 
+.what p.title{
+  color: $darkText;
+  /*margin:40px auto;
+  width:300px;*/
+  line-height:26px;
+  letter-spacing:0;
+  font-size:16px;
+  font-weight:300;
+  text-align:center;
+}
+
+
+
 .what p{
   text-align:center;
   font-size:18px;
@@ -227,7 +227,7 @@
   line-height:26px;
   letter-spacing:0;
   position:relative;
-  font-weight:400;
+  font-weight:300;
 }
 
 
