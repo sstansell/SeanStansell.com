@@ -119,7 +119,7 @@ gulp.task('sass', function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task('minify-html', function() {
+gulp.task('minify-html', ['clean'], function() {
   var opts = {
     conditionals: true,
     spare:true
