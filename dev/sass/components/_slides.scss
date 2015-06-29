@@ -35,7 +35,7 @@
 .rslides_tabs {
   list-style: none;
   padding: 0;
-  background: $medText;
+  background: $whitish;
   /*box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
   -moz-box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
   -webkit-box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);*/
@@ -68,7 +68,7 @@
   }
 
 .rslides_tabs .rslides_here a {
-  background: $darkText;
+  background: $activeColor;
   color: $whitish;
   font-weight: bold;
   }
