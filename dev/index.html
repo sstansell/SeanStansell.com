@@ -158,8 +158,8 @@
         <div class="col span_1">
           <h2>Responsive Websites</h2>
           <p>
-            <a href="#modal" >
-            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/honda_400.png" alt="Responsive Websites" />
+            <a href="#responsiveModal" >
+            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/honda_400.png" data-imageGroup="main" alt="Responsive Websites" />
 
                 <p class="center">In 2012 I introduced Responsive Websites to auto dealers</p>   
 
@@ -171,14 +171,14 @@
           <h2>Responsive CMS</h2>
           <p>
             <a href="#">
-            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/cms_min.png" alt="Responsive Websites" />
+            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/cms_min.png" data-imageGroup="main" alt="Responsive Websites" />
                 <p class="description">Description goes here...</p>   
             </a> 
           </p>  
           <h2>Another Project</h2>
           <p>
             <a href="#">
-            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/cms_min.png" alt="Responsive Websites" />
+            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/cms_min.png" data-imageGroup="main" alt="Responsive Websites" />
    
                 <p class="description">Description goes here...</p>   
             </a> 
@@ -188,7 +188,7 @@
           <h2>Volunteer Work</h2>
           <p>
             <a href="#">
-            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/artsFestival_400.png" alt="Responsive Websites" />
+            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/artsFestival_400.png" data-imageGroup="main" alt="Responsive Websites" />
                 <p class="description">Description goes here...</p>   
             </a> 
           </p>      
@@ -321,16 +321,17 @@
   <script src="js/script.js"></script> <!-- All script -->  
 
   <script>
-    function loadImages() {
+    function loadImages(imageGroup) {
       var imgDefer = document.getElementsByTagName('img');
       for (var i=0; i<imgDefer.length; i++) {
-      if(imgDefer[i].getAttribute('data-src')) {
+      if(imgDefer[i].getAttribute('data-src')&&imgDefer[i].getAttribute('data-imageGroup')===imageGroup) {
       imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
     } } }
-    window.onload = loadImages;
+    window.onload = loadImages('main');
 
 
     $(document).on('opening', '.remodal', function () {
+      loadImages(this.getAttribute('data-remodal-id'));
       $(".rslides").responsiveSlides({
         pager:true
       });
@@ -347,16 +348,16 @@
     if (raf) raf(cb);
     else window.addEventListener('load', cb);
   </script>-->
-    <div class="remodal" data-remodal-id="modal" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+    <div class="remodal" data-remodal-id="responsiveModal" aria-labelledby="modalTitle" aria-describedby="modalDesc">
       <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
       <div>
         <h2>Responsive Websites</h2>
         <p>
           In starting in late 2011, I led a project to build a Responsive Websites platform for automotive dealers in the US. That platform went live in mid-2012, and started delivering the first Responsive Websites in the dealer website industry.  Today it serves hundreds of sites to dealers all over the US, generating millions of dollars in annual revenue.
           <ul class="rslides">
-            <li><img class="responsive" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/honda2.png" defer="true" alt="Honda dealer website"></li>
-            <li><img class="responsive" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/honda.png" alt="Honda dealer website"></li>
-            <li><img class="responsive" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/riverside.png" alt="Honda dealer website"></li>
+            <li><img class="responsive" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/honda2.png" data-imageGroup="responsiveModal" alt="Honda dealer website"></li>
+            <li><img class="responsive" data-imageGroup="responsiveModal" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/honda.png" alt="Honda dealer website"></li>
+            <li><img class="responsive" data-imageGroup="responsiveModal" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/riverside.png" alt="Honda dealer website"></li>
           </ul>
         </p>
       </div>
