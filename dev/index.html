@@ -32,7 +32,7 @@
 </div>-->
 
 
-<div class="container">
+<div class="container remodal-bg">
 
 
 <!-- section start-page -->
@@ -114,7 +114,7 @@
         <!--<div class="circle-one"></div>-->
     
           <h2>WEB<br>DEVELOPER</h2>
-          <p>With well over 15 years experience developing websites, there are few technologies I haven't used. While there languages I like more than others, I'm not a zealot.  I'm more of a "right tool for the job" kind of guy. Trends will come and go, but solid principles will never go out of style.  So whether a job calls for PHP or .NET, Ruby or Python, NodeJS or plain old HTML, my experience and base of solid fundamentals get the job done.</p>
+          <p>With well over 15 years experience developing websites, there are few technologies I haven't used. While there are languages I like more than others, I'm not a zealot.  I'm more of a "right tool for the job" kind of guy. Trends will come and go, but solid principles will never go out of style.  So whether a job calls for PHP or .NET, Ruby or Python, NodeJS or plain old HTML, my experience and base of solid fundamentals get the job done.</p>
     
       </div>
   
@@ -123,7 +123,7 @@
         <!--<div class="circle-two"></div>-->
     
           <h2>PROJECT<br>MANAGER</h2>
-          <p>Keeping a complicated project moving forward, while keeping costs in check is a delicate art. It requires knowledge of good processes, and knowing how to adopt those processes to your situation. As a Scrum Alliance<sup>&reg;</sup> certified ScrumMaster, and practicing project manager for more than 10 years, I have both the training and hands on experiece to keep teams moving in the right direction. </p>
+          <p>Keeping a complicated project moving forward, while keeping costs in check is a delicate art. It requires knowledge of good processes, and knowing how to adopt those processes to your situation. As a Scrum Alliance<sup>&reg;</sup> certified ScrumMaster, and practicing project manager for more than 10 years, I have both the training and hands on experience to keep teams moving in the right direction. </p>
     
       </div>
   
@@ -133,7 +133,7 @@
         <!--<div class="circle-three"></div>-->
     
         <h2>PRODUCT<br>MANAGER</h2>
-        <p>Translating an idea into a successful product takes discipline, research, and a willingness to productively fail. Managing development, market research, operations, sales, and the bottom line is a delicate balance. My hands on Product Management experience and my Scrum Alliance<sup>&reg;</sup> Scrum Product Owner and Pragmatic Marketing framework certifications give me the experience and training to make a product successful.</p>
+        <p>Translating an idea into a successful product takes discipline, research, and a willingness to productively fail. Managing development, market research, operations, sales, and the bottom line is a delicate balance. My hands-on Product Management experience and my Scrum Alliance<sup>&reg;</sup> Scrum Product Owner and Pragmatic Marketing framework certifications give me the experience and training to make a product successful.</p>
     
       </div>  
     </div>
@@ -158,7 +158,7 @@
         <div class="col span_1">
           <h2>Responsive Websites</h2>
           <p>
-            <a href="#">
+            <a href="#modal" >
             <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/honda_400.png" alt="Responsive Websites" />
 
                 <p class="center">In 2012 I introduced Responsive Websites to auto dealers</p>   
@@ -249,6 +249,10 @@
           <div class="row">
             <div class="col span_3">
               <p class="title">Father. Husband. Son. Brother. Cook. Musician. Star Wars Geek. Hokie Fan. Whiskey Drinker. Eagle Scout. Programming Enthusiast. Usability Snob. Grammar Nerd.</p>
+
+              <p class="title">
+              I started college as a music major, but graduated with a BA in Communications.  Since then I've built a career by filling whatever role needed to be filled, from developer to systems administrator, from DBA to support rep. The company needs blog posts written? Done.  Sales presentations? I've done <em>hundreds</em> of them. Strategic planning? Webinars? Training? Check, check, check. There are few roles in a web software company I haven't filled, and that breadth of experience has helped me appreciate all of the work that goes into success, and all of the people required to get there.
+              </p>
             </div>
           </div>  
       
@@ -310,23 +314,27 @@
 	<!-- Scripts -->
 	
 	<script src="js/vendor/jquery-1.11.3.min.js" type="text/javascript"></script>
-	<!--<script src="js/jquery-ui-1.10.4.min.js" type="text/javascript"></script>--> <!-- jQuery -->
-	<!--<script src="js/vendor/jquery.nicescroll.js"></script>--> <!-- jQuery NiceScroll -->
+  <script src="js/vendor/remodal.min.js" type="text/javascript"></script>
+  <script src="js/vendor/responsiveSlides.min.js" type="text/javascript"></script>
 	<script src="js/vendor/jquery.sticky.js"></script> <!-- jQuery Stick Menu -->
-	<!--<script src="js/vendor/masonry.pkgd.min.js"></script>--> <!-- All script -->
-	<!--<script src="js/vendor/imagesloaded.pkgd.min.js"></script>--> <!-- All script -->	
   <!--<script src="js/vendor/jquery.parallax.js"></script>--> <!-- jQuery Parallax --> 
-  <!--<script src="js/vendor/jquery.unveil.js"></script>--> <!-- jQuery Unveil --> 
   <script src="js/script.js"></script> <!-- All script -->  
 
   <script>
     function loadImages() {
       var imgDefer = document.getElementsByTagName('img');
       for (var i=0; i<imgDefer.length; i++) {
-      if(imgDefer[i].getAttribute('data-src')) {
+      if(imgDefer[i].getAttribute('data-src')&&) {
       imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
     } } }
     window.onload = loadImages;
+
+
+    $(document).on('opening', '.remodal', function () {
+      $(".rslides").responsiveSlides({
+        pager:true
+      });
+    });
   </script> 
   <!--<script>
     var cb = function() {
@@ -339,7 +347,23 @@
     if (raf) raf(cb);
     else window.addEventListener('load', cb);
   </script>-->
-
+    <div class="remodal" data-remodal-id="modal" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+      <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+      <div>
+        <h2>Responsive Websites</h2>
+        <p>
+          In starting in late 2011, I led a project to build a Responsive Websites platform for automotive dealers in the US. That platform went live in mid-2012, and started delivering the first Responsive Websites in the dealer website industry.  Today it serves hundreds of sites to dealers all over the US, generating millions of dollars in annual revenue.
+          <ul class="rslides">
+            <li><img class="responsive" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/honda2.png" defer="true" alt="Honda dealer website"></li>
+            <li><img class="responsive" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/honda.png" alt="Honda dealer website"></li>
+            <li><img class="responsive" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/riverside.png" alt="Honda dealer website"></li>
+          </ul>
+        </p>
+      </div>
+      <br>
+      <!--<button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>-->
+      <button data-remodal-action="confirm" class="remodal-confirm">Close</button>
+    </div>
 
 </body>
 
