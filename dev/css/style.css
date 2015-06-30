@@ -1393,6 +1393,13 @@ html.remodal-is-locked {
   .content {
     width: 92%;
     margin: auto; }
+  .start-page {
+    background: url("/images/backgrounds/orangeSparksClose_sml.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -o-background-size: inherit;
+    -moz-background-size: inherit;
+    -webkit-background-size: inherit; }
   .start-page .content {
     width: 90%;
     height: 100%; }
