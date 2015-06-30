@@ -8,6 +8,15 @@
 		width:92%;
 		margin: auto;
 	}
+	.start-page{
+	  	background:url($mainBgImageMed);
+		background-repeat:no-repeat;
+		background-attachment:fixed;
+		-o-background-size: inherit;
+		-moz-background-size: inherit;
+		-webkit-background-size:inherit;	  
+	}
+
     .start-page .content {
       width:90%;
       height:100%;
@@ -45,7 +54,6 @@
 		padding-bottom: 30px;
 		margin-top:20px;
 	}
-
 
 	.bio{
 	  height:1400px;
