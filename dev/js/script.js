@@ -71,8 +71,30 @@ else
   }
 
 }
+/** loads images after initial pageload
+ imageGroup is a param that looks in the data-imageGroup attribute 
+ to allow you to load subgroups of images
+ */
+function loadImages(imageGroup) {
+  var imgDefer = document.getElementsByTagName('img');
+  for (var i=0; i<imgDefer.length; i++) {
+  if(imgDefer[i].getAttribute('data-src')&&imgDefer[i].getAttribute('data-imageGroup')===imageGroup) {
+  imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+} } }
+window.onload = loadImages('main');
 
-
+//a bunch of stuff to do when we open a modal
+$(document).on('opening', '.remodal', function () {
+  //get the ID of the modal we're opening
+  var remodalId = this.getAttribute('data-remodal-id');
+  //load the images for the modal (don't do this at page load so we don't waste bandwidth & time)
+  loadImages(remodalId);
+  //start the slideshow
+  var slideContainer = '.' + remodalId + '-slides';
+  makeBSS(slideContainer, {
+    swipe : true            
+  });
+});
 /*  //Menu mobile click
   $( ".icon" ).click(function() {
     $( " ul.menu-click" ).slideToggle( "slow", function() {
