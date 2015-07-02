@@ -15,10 +15,10 @@
     });
 
     //animates the scroll to the content when you click on the menu
-   $('#menu a').bind('click', function(e) {
+   $('.menu a').bind('click', function(e) {
 	   e.preventDefault();
 	   var target = $(this).attr("href");
-  	 $('html, body').stop().animate({ scrollTop: $(target).offset().top-140 }, 1000, function() {
+  	 $('html, body').stop().animate({ scrollTop: $(target).offset().top-60 }, 1000, function() {
 
   	 });
 			
