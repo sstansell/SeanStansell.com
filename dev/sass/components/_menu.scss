@@ -75,13 +75,19 @@ $transitionSpeed: .7s;
     letter-spacing:3px;     
     opacity:0;
     margin-left:-300px;
+    a{
+      text-decoration: none;
+      color: $darkText;
+    }
   }
   .menu-content{
-    width:$containerWidth;
+    width:100%;
+    max-width: $containerWidth;
     position:relative;
     margin:0 auto;
     ul{
-      width:$containerWidth;
+      width:100%;
+      max-width: $containerWidth;
       left:50%;
       float:right;
       text-align:center;

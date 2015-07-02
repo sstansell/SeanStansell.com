@@ -2,12 +2,33 @@
   @media (max-width: $mediumBreak){
     //turn off the menu
     .menu{
-      display:none;
+      //display:none;
     }
 	.content{
 		width:92%;
 		margin: auto;
 	}
+	.menu{
+		.menu-content{
+			li{
+				a{
+					padding: 0 10px 0 10px;
+				}
+			}
+		}
+	}
+	.menu-stuck .menu{
+		.menu-content{
+			ul{
+				width: 468px;
+			}
+			.logo{
+				margin-left: 20px;
+				width: 280px;
+			}
+		}
+	}
+
 	.start-page{
 	  	background:url($mainBgImageMed);
 		background-repeat:no-repeat;
