@@ -7,7 +7,7 @@
   // Menu Scroll to content and Active menu
   var lastId,
     topMenu = $("#menu"),
-    topMenuHeight = topMenu.outerHeight()+145,
+    topMenuHeight = topMenu.outerHeight()+60,
     menuItems = topMenu.find("a"),
     scrollItems = menuItems.map(function(){
       var item = $($(this).attr("href"));
@@ -25,7 +25,7 @@
 	   return false;
    });
    //sets the active menu item as you scroll through the page
-  $(window).scroll(function(){
+  /*$(window).scroll(function(){
    var fromTop = $(this).scrollTop()+topMenuHeight;
    var cur = scrollItems.map(function(){
      if ($(this).offset().top < fromTop)
@@ -41,7 +41,7 @@
          .parent().removeClass("active")
          .end().filter("[href=#"+id+"]").parent().addClass("active");
    }                   
-  });  
+  }); */ 
   
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -54,10 +54,9 @@ else
 {
 
   // FadeTo elements
-  if ( $(window).width() > 1023) {  
+  /*if ( $(window).width() > 1023) {  
 
-    //tiles = $("h2, h3, .column-one, .column-two, .column-three, .grid li, .contact .content .form, .contact .content .contact-text ").fadeTo(0, 0);
-    tiles = $(".what, .portfolio, .bio, .contact").fadeTo(0, 0);
+   tiles = $(".what, .portfolio, .bio, .contact").fadeTo(0, 0);
 
     $(window).scroll(function(d,h) {
       tiles.each(function(i) {
@@ -67,7 +66,7 @@ else
       });
     });
 
-  }
+  }*/
 
 }
 /** loads images after initial pageload
