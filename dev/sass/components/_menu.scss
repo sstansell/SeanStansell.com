@@ -122,20 +122,16 @@ $transitionSpeed: .7s;
 
 
 .menu-stuck .menu{
-  
   .menu-content{
     ul{
-      //text-align: right;
       width: 520px;    
     }
     .logo{
-      //outline: 1px solid red;
       width: 300px;
       opacity: 1; 
       margin-left: 0; 
       transition: width 0s ease-in-out $transitionSpeed;  
       transition: margin-left $transitionSpeed ease-in-out 0.1s;
-      //transition: opacity 0s ease-in-out 5.1s;                            
     }
   }
 
