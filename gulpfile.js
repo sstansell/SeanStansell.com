@@ -6,6 +6,7 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 var minifyHTML = require('gulp-minify-html');
 var clean = require('gulp-clean');
 var jshint = require('gulp-jshint');
@@ -95,6 +96,7 @@ gulp.task('sass-release', ['clean'], function() {
 gulp.task('sass', function() {
     return gulp.src("dev/sass/style.scss")
         .pipe(sass())
+        .pipe(autoprefixer())        
         .pipe(gulp.dest("dev/css"))
         .pipe(browserSync.stream());
 });
