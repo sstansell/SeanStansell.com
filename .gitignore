@@ -29,6 +29,9 @@ node_modules
 #Sass Cache
 .sass-cache
 
+#dev copies of stylesheets (since they get re-built by SASS)
+dev/css
+
 #Sublime stuff
 *.sublime-project
 *.sublime-workspace
