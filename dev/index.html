@@ -67,7 +67,7 @@
 
   <!-- section menu mobile -->
   
-  <section class="menu-media">
+  <!--<section class="menu-media">
   
     <div class="menu-content">
     
@@ -86,26 +86,26 @@
         <a href="#contact"><li href="#contact">CONTACT</li></a>
         
     </ul>
-   
-   
+   -->
   <!-- section menu -->
   
   <section class="menu">
 
     <div class="menu-content">
-    
-    <div class="logo">SEAN STANSELL</div>
-    
-      <ul id="menu">
-        <li><a href="#what">WHAT I DO</a></li>
-        <li><a href="#work">MY WORK</a></li>
-        <li><a href="#who">WHO I AM</a></li>
-        <li><a href="#contact">CONTACT ME</a></li>
-      </ul>
-    </div>
+      
+      <div class="logo"><a href="#">SEAN STANSELL</a></div>
+      
+        <ul id="menu">
+          <li><a href="#what">WHAT I DO</a></li>
+          <li><a href="#work">MY WORK</a></li>
+          <li><a href="#who">WHO I AM</a></li>
+          <li><a href="#contact">CONTACT ME</a></li>
+        </ul>
+      </div>
+    <div>
   
-  
-  </section>
+  </section>   
+
 
 
   <!-- "What I Do" section -->
@@ -306,6 +306,9 @@
   <script>
     //our app's object, so we don't pollute the global namespace (give a hoot!  don't pollute!)
     var ssApp = {};
+    $(function() {
+      $(".menu").on('sticky-start', function() { console.log("Started"); });
+    });
   </script> 
   <!--<script>
     var cb = function() {
