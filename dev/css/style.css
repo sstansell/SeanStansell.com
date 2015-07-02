@@ -6,11 +6,12 @@
 /** MARGIN */
 /** TYPE */
 /** BREAKPOINTS */
+/* Font Google - strong reaload time */
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300,100);
 /* http://meyerweb.com/eric/tools/css/reset/  
     v2.0 | 20110126 
     License: none (public domain) 
 */
-@import url(http://fonts.googleapis.com/css?family=Lato:400,300,100);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,7 +55,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* Font Google - strong reaload time */
 html, body {
   font-family: "Lato", sans-serif;
   font-size: 20px;
@@ -63,25 +63,29 @@ html, body {
   font-weight: 400;
   height: 100%; }
 
-body {
-  background-color: #fafafa; }
-
-a {
-  text-decoration: none;
-  outline: none;
-  color: #212121; }
-  a:hover {
-    color: #BF3F3F; }
+strong {
+  font-weight: 700; }
 
 em {
   font-style: italic; }
+
+sup {
+  vertical-align: super;
+  font-size: smaller; }
+
+a {
+  text-decoration: underline;
+  outline: none;
+  color: #BF3F3F; }
+  a:hover {
+    color: #BF3F3F; }
 
 h1 {
   font-size: 3.5rem;
   color: #fafafa;
   font-weight: 100;
   text-transform: uppercase;
-  letter-spacing: 6px;
+  letter-spacing: 14.9px;
   line-height: 1.2; }
 
 h2 {
@@ -95,15 +99,14 @@ h2 {
 p {
   color: #fafafa;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: .05em;
   margin-top: 40px; }
 
 h1 span {
   color: #2fa68e; }
 
-sup {
-  vertical-align: super;
-  font-size: smaller; }
+body {
+  background-color: #fafafa; }
 
 ::selection {
   background: #BF3F3F;
@@ -118,68 +121,16 @@ sup {
   width: 100%;
   height: 100%; }
 
-strong {
-  font-weight: 700; }
-
-input {
-  width: 180px;
-  height: 40px;
-  background: #f8f7f7;
-  border-top: 1px solid #333;
-  border-bottom: 0;
-  border-left: 0;
-  border-right: 0;
-  color: #333;
-  font-weight: 300;
-  line-height: 40px;
-  padding-left: 15px;
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
-  margin-bottom: 10px; }
-
-input:focus {
-  background: #f4f4f4; }
-
-textarea {
-  width: 420px;
-  height: 150px;
-  border-top: 1px solid #333;
-  border-bottom: 0;
-  line-height: 20px;
-  border-left: 0;
-  border-right: 0;
-  background: #f8f7f7;
-  color: #333;
-  font-weight: 300;
-  padding: 15px 0 0 15px;
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
-  margin-bottom: 10px; }
-
-textarea:focus {
-  background: #f4f4f4; }
-
-input.submit {
-  width: 100px;
-  height: 34px;
-  float: right;
-  margin: 20px 10px 0 0;
-  border: 0;
-  font-weight: 700;
-  text-align: right;
-  background: none;
-  -webkit-transition: all 0.6s ease-in;
-  -moz-transition: all 0.6s ease-in;
-  -ms-transition: all 0.6s ease-in;
-  -o-transition: all 0.6s ease-in;
-  transition: all 0.6s ease-in; }
-
 img.responsive {
   width: 100%;
   height: auto; }
 
 .onlySmall {
   display: none; }
+
+a.noDecorate {
+  text-decoration: none;
+  color: #212121; }
 
 /**
  * Gridpak Beta SCSS 
@@ -345,6 +296,7 @@ img.responsive {
   display: block;
   padding: 0 20px 0 20px;
   line-height: 60px;
+  text-decoration: none;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   -ms-transition: all 0.2s ease-in;
@@ -577,7 +529,8 @@ img.responsive {
 
 .portfolio .content img {
   width: 100%;
-  height: auto; }
+  height: auto;
+  margin-bottom: 40px; }
 
 .portfolio .content .read-more {
   width: 183px;
@@ -893,6 +846,10 @@ img.responsive {
   margin-bottom: 70px;
   height: 100%; }
 
+.contact a {
+  color: #212121;
+  text-decoration: none; }
+
 /* Footer */
 .footer {
   position: fixed;
@@ -1165,7 +1122,6 @@ html.remodal-is-locked {
   margin:30px auto;*/
   color: #757575;
   line-height: 26px;
-  letter-spacing: 0;
   position: relative;
   font-weight: 400;
   padding-bottom: 30px; }
@@ -1414,14 +1370,18 @@ html.remodal-is-locked {
   .bio .content {
     height: 610px; }
   h1 {
-    font-size: 2.2rem;
-    font-weight: 300; } }
+    font-weight: 300;
+    letter-spacing: 6px; } }
 
 /** small screens */
 @media (max-width: 759px) {
   /**	Utility class to show stuff only on small screens */
   .onlySmall {
     display: inherit; }
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 6px; }
   .what p {
     padding-bottom: 30px;
     margin-top: 20px; }
