@@ -1,9 +1,7 @@
 /** medium/small screens */
   @media (max-width: $mediumBreak){
     //turn off the menu
-    .menu{
-      //display:none;
-    }
+
 	.content{
 		width:92%;
 		margin: auto;
@@ -75,7 +73,17 @@
     	font-size: 2.2rem;
     	font-weight:300;
     	letter-spacing:6px;
-    }	
+    }
+    .menu{
+      display:none;
+    }  
+
+	.start-page .content .text .logo{
+	  width:123px;
+	  height:30px;
+	  margin:0 auto 50px;
+	  
+	}      	
   	.what p{
 		padding-bottom: 30px;
 		margin-top:20px;
@@ -89,6 +97,24 @@
 	}
 	.bio .content{
 	  height:1210px;
-	}	
+	}
+
+	@-webkit-keyframes bounce-fade {
+	    0%   { opacity: 0; bottom: 125px; }
+	    100% { opacity: 1; bottom: 40px; }
+	}
+	@-moz-keyframes bounce-fade {
+	    0%   { opacity: 0; bottom: 125px; }
+	    100% { opacity: 1; bottom: 40px; }
+	}
+	@-o-keyframes bounce-fade {
+	    0%   { opacity: 0; bottom: 125px; }
+	    100% { opacity: 1; bottom: 40px; }
+	}
+	@keyframes bounce-fade {
+	    0%   { opacity: 0; bottom: 125px; }
+	    100% { opacity: 1; bottom: 40px; }
+	}
+
 }
 
