@@ -250,6 +250,7 @@
 .portfolio .content img{
   width: 100%;
   height: auto;
+  margin-bottom: 40px;
 }
 .portfolio .content .read-more{
   width:183px;
@@ -608,7 +609,10 @@
 }
 
 
-
+.contact a{
+  color: $darkText;
+  text-decoration: none;
+}
 
 
 
