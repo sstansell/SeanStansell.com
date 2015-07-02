@@ -89,6 +89,7 @@ gulp.task('copy', ['clean'], function() {
 gulp.task('sass-release', ['clean'], function() {
     return gulp.src("dev/sass/style.scss")
         .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(autoprefixer())          
         .pipe(gulp.dest("dev/css"))
         .pipe(browserSync.stream());
 });
