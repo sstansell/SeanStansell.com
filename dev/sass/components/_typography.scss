@@ -1,6 +1,4 @@
-/* Font Google - strong reaload time */
 
-@import url(http://fonts.googleapis.com/css?family=Lato:400,300,100);
 html, body{
   font-family: $bodyFontFamily;
   font-size:20px;
@@ -8,4 +6,55 @@ html, body{
   color:$darkText;
   font-weight:400;
   height:100%;
+}
+
+strong{
+  font-weight:700;
+}
+
+em{
+  font-style: italic; 
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+} 
+
+a{
+  text-decoration:underline;
+  outline:none;
+  color: $activeColor;
+  &:hover {
+      color:$activeColor;
+  }  
+}
+
+
+h1{
+  font-size:3.5rem;
+  color:$whitish;
+  font-weight:100;
+  text-transform:uppercase;
+  letter-spacing:14.9px;
+  line-height:1.2;
+}
+h2{
+  font-size:2.0rem;
+  color:$whitish;
+  font-weight:400;
+  /*text-transform:uppercase;*/
+  letter-spacing:6px;
+  line-height:1.2;
+}
+p{
+  color:$whitish;
+  font-weight:400;
+  letter-spacing:.05em;
+  margin-top:40px;
+}
+
+
+h1 span{
+  color:#2fa68e;
 }
