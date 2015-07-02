@@ -141,5 +141,5 @@ gulp.task('serve', ['sass'], function() {
   });
   gulp.watch("dev/sass/**/*.scss", ['sass']);
   //gulp.watch(['*.html', 'css/**/*.css', 'js/**/*.js'], browserSync.reload);
-  gulp.watch(['*.html', 'styles/**/*.css', 'scripts/**/*.js'], {cwd: 'dev'}, reload);
+  gulp.watch(['*.html', 'styles/**/*.css', 'js/**/*.js'], {cwd: 'dev'}, reload);
 });
