@@ -1,10 +1,9 @@
-
-  // niceScroll
-  //$("html").niceScroll();
-    
-    
   // Stick menu
-  $(".menu").sticky({topSpacing:0});
+  $(".menu").sticky({
+                      topSpacing:0,
+                      className: "menu-stuck"
+                    });
+
   // Menu Scroll to content and Active menu
   var lastId,
     topMenu = $("#menu"),
@@ -15,8 +14,8 @@
       if (item.length) { return item; }
     });
 
-    //a nifty bit of code that prevents anchors with hashes from working...
-   /*$('a[href*=#]').bind('click', function(e) {
+    //animates the scroll to the content when you click on the menu
+   $('#menu a').bind('click', function(e) {
 	   e.preventDefault();
 	   var target = $(this).attr("href");
   	 $('html, body').stop().animate({ scrollTop: $(target).offset().top-140 }, 1000, function() {
@@ -24,8 +23,8 @@
   	 });
 			
 	   return false;
-   });*/
-
+   });
+   //sets the active menu item as you scroll through the page
   $(window).scroll(function(){
    var fromTop = $(this).scrollTop()+topMenuHeight;
    var cur = scrollItems.map(function(){
