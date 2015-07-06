@@ -1,6 +1,9 @@
 /** medium/small screens */
   @media (max-width: $mediumBreak){
     //turn off the menu
+	.onlyBig{
+		display: inherit;
+	}
 
 	.content{
 		width:92%;
@@ -69,15 +72,32 @@
 		display:inherit;
 		
 	}
+	.onlyBig{
+		display: none;
+	}	
     h1{
     	font-size: 2.2rem;
     	font-weight:300;
     	letter-spacing:6px;
     }
     .menu{
-      display:none;
+		
     }  
+	.menu-stuck .menu{
+	  .menu-content{
+	    ul{
+	      width: 100%;    
+	    }
+	    .logo{
+	      width: 0;
+	      opacity: 0; 
+	    }
+	  }
 
+	}    
+	.menu-small{
+		display:block;
+	}
 	.start-page .content .text .logo{
 	  width:123px;
 	  height:30px;

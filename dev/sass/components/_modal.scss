@@ -289,16 +289,24 @@ html.remodal-is-locked {
 
 .remodal p{
   text-align:center;
-  font-size:18px;
+  color:$darkText;
+  //font-size:18px;
   /*width:250px;
   margin:30px auto;*/
-  color:$medText;
+  /*
   line-height:26px;
   position:relative;
-  font-weight:400;
+  font-weight:400;*/
   padding-bottom:30px;
 }
-
+.remodal hr{
+      color: $darkText;
+      margin-top:30px;
+      background-color: $darkText;
+      height: 1px;
+      width:106px;
+      border:0;
+    }
 /* Keyframes
    ========================================================================== */
 
