@@ -129,7 +129,7 @@ $transitionSpeed: .7s;
     .logo{
       width: 300px;
       opacity: 1; 
-      margin-left: 0; 
+      margin-left: 25px; 
       transition: width 0s ease-in-out $transitionSpeed;  
       transition: margin-left $transitionSpeed ease-in-out 0.1s;
     }
