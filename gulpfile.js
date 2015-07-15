@@ -14,6 +14,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var gzip = require('gulp-gzip');
+var uncss = require('gulp-uncss');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
@@ -54,6 +55,13 @@ gulp.task('scripts', ['clean'], function() {
   //.pipe(gzip({ append: true }))
   .pipe(gulp.dest(bases.dist + 'js/'));
 });
+// Process vendor scripts and concatenate them into one output file
+gulp.task('vendorScripts', ['clean'], function() {
+  gulp.src(paths.libs, {cwd: bases.app})
+  .pipe(concat('vendor.js'))
+  //.pipe(gzip({ append: true }))
+  .pipe(gulp.dest(bases.dist + 'js/vendor/'));
+});
 
 // Imagemin images and ouput them in dist
 gulp.task('imagemin', ['clean'], function() {
@@ -89,6 +97,9 @@ gulp.task('copy', ['clean'], function() {
 gulp.task('sass-release', ['clean'], function() {
     return gulp.src("dev/sass/style.scss")
         .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(uncss({
+            html: ['dev/index.html']
+        }))              
         .pipe(autoprefixer())          
         .pipe(gulp.dest("dev/css"))
         .pipe(browserSync.stream());
@@ -97,6 +108,9 @@ gulp.task('sass-release', ['clean'], function() {
 gulp.task('sass', function() {
     return gulp.src("dev/sass/style.scss")
         .pipe(sass())
+        .pipe(uncss({
+            html: ['dev/index.html']
+        }))        
         .pipe(autoprefixer())        
         .pipe(gulp.dest("dev/css"))
         .pipe(browserSync.stream());
